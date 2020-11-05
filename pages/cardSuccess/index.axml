@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card-header flex flex-column justify-center align-center">
+    <image class="success" src="https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/mini/success.png" />
+    <view class="card-title">领卡成功</view>
+    <view class="card-desc">扫码乘车</view>
+  </view>
+  <view class="card-content flex justify-center align-center">
+    <image class="desc" src="https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/mini/desc.png" />
+  </view>
+  <view class="card-footer flex justify-around align-center">
+    <form report-submit onSubmit="handleCheck">
+      <button class="check-card" form-type="submit">查看卡片</button>
+    </form>
+    <form report-submit onSubmit="handleBus">
+      <button class="take-bus" form-type="submit">立即乘车</button>
+    </form>
+  </view>
+</view>

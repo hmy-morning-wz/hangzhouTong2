@@ -1,0 +1,106 @@
+<import src="./template/cardbox.axml"/>
+<import src="./template/iconbox.axml"/>
+<import src="./template/bannerList.axml"/>
+<import src="./template/banner2List.axml"/>
+<import src="./template/circleRecommend.axml"/>
+<import-sjs name="helper" from="../../utils/helper.sjs"/>
+<ant-skeleton a:if="{{isLoading}}"/>
+
+<block a:else >
+<view class="container-index">
+  <lifestyle a:if="{{publicId && lifestyle}}" publicId="{{publicId}}" onFollow="onFollow"/>
+  <template a:if="{{card}}" is="cardbox"  data="{{eleCards,busCardNum,cardIndex,autoplay,vertical,interval,circular,cardMark,draw,tagMatch,drawText,remainLotteryNumber}}"/>
+
+
+<block a:if="{{showGuidance}}" >
+<view class="tips-dialog" onTap="onCloseTap"  disable-scroll="{{true}}" >
+   <view class="warp" style="top: {{titleBarHeight+statusBarHeight-10}}px">
+   <view class="corner-warp" >
+ <view class="corner" ></view>
+ </view>
+ <view class="guidance-content"  onFirstAppear="onNopAppear" data-group="添加到首页"  >
+   <view> 点击<image class="more" mode="scaleToFill" src="https://images.allcitygo.com/miniapp/202008/more.png"/> 并选择“添加到首页” </view>
+   <view class="text1">{{addHomeGuidanceDesc.text}}</view>
+   <image a:if="{{addHomeGuidanceDesc.image}}" class="add-home" mode="scaleToFill" src="{{addHomeGuidanceDesc.image}}"/>
+ </view>
+    </view>
+</view>
+</block>
+
+  <template a:if="{{icon}}" is="iconbox"  data="{{ele_box_icon}}"/>
+  <template is="bannerList"  data="{{banner,bannerList,humantohuman,humantohumanSet}}"/>
+    <view id="healthgold">
+  <health-gold a:if="{{health && permission}}" signList="{{signList}}" healthSet="{{healthSet}}"></health-gold>
+  </view>
+  <template a:if="{{banner2}}" is="banner2List"  data="{{banner2List,currentTarget}}"/>
+  <view a:if="{{ad_tiny}}" class="banner-container">
+      <view class="line-gray"> </view>
+      <view class="ad-banner"> <ad unit-id="{{ad_tiny}}"></ad> </view>
+      <view class="line-gray"> </view>
+   </view>
+  <!-- <ad-list a:if="{{adFeedsPlugin && adFeedsPluginSet &&adFeedsPluginSet.resourceId  }}" resourceId="{{adFeedsPluginSet.resourceId}}" />-->
+  <component a:if="{{pluginIsReady && adFeedsPlugin}}" is="dynamic-plugin://2021001154677005/ad-list"  resourceId="{{adFeedsPluginSet.resourceId}}" />
+  <template a:if="{{circleRecommendItem}}" is="circleRecommend"  data="{{circleRecommendList,hasLocation}}"/>
+  <view class="recommend-list" a:if="{{circleRecommendItem}}">
+    <water-flow a:if="{{circleRecommendItem}}" />
+    <view class="has-more" a:if="{{hasMore && hasLocation}}">
+      <image class="loading" mode="scaleToFill" src="{{helper.crossImage('https://images.allcitygo.com/20200730155648426MNp6cK.png')}}"/>
+      稍等一下
+    </view>
+    <view class="has-more" a:else>
+      ———   已经到底了  ———
+    </view>
+  </view>
+  
+  <popmodal a:if="{{popupWindow}}" show="{{modalOpened}}" onModalClose="onModalClickClose" advice="{{true}}" showClose="{{popup.showClose}}" hiddenButton="{{popup.hiddenButton}}">
+    <view hidden="{{!popup.imageLoad}}" style="display: flex; width: 542rpx;height: 680rpx;">
+      <form  report-submit onSubmit="onSubmit">
+        <button style="width: 542rpx;height: 680rpx;" class="form-btn" hover-class="none" form-type="submit">
+          <image a:if="{{popupWindow.image}}" onLoad="popupImageOnload" mode="aspectFit" onAppear="onAppear" onTap="popupWindowClick" data-group="弹框" data-obj="{{popupWindow}}" style="width: 542rpx;height: 680rpx;" src="{{`${popupWindow.image||''}`}}" />
+        </button>
+      </form>
+    </view>
+    <view a:if="{{popupWindow.showButton}}" slot="footer" style="{{popupWindow.buttonStyle||''}}" onTap="popupWindowClick" data-group="弹框按钮" data-obj="{{popupWindow}}">{{popupWindow.buttonText||''}}</view>
+  </popmodal>
+ <!--  <novice-guidance a:if="{{ (!(popupWindow && modalOpened)) && permissionHasLoad &&(humantohuman || (health && permission) || (circleRecommendItem && circleRecommendList.length > 0))}}" show="{{showGuidance}}" first="{{humantohuman}}" second="{{health  && permission}}" third="{{circleRecommendItem &&  circleRecommendList.length  > 0}}" welfareStyle="{{welfareStyle}}" healthGoldtyle="{{healthGoldtyle}}"  thirdStyle="{{thirdStyle}}" guidanceDesc="{{guidanceDesc}}" onStartExperience="onStartExperience" onFirstGuidance="onFirstGuidance" onThridGuidance="onThridGuidance" onSecondGuidance="onSecondGuidance" ></novice-guidance>
+-->
+
+ <modal
+    a:if="{{modalOpened && prizeResult}}"
+    show="{{modalOpened}}"
+    showClose="{{true}}"
+    closeType="1"
+    zIndex="1000"
+    className="{{prizeResult.typeClass}}"
+    onModalClick="onModalClick"
+    onModalClose="onModalClose"    
+  >
+    <view slot="header" class="header" >{{prizeResult.title}}</view>  
+    <view a:if="{{prizeResult.type==='BusCoupons'}}" class="box1-item" onFirstAppear="onNopAppear" data-group="抽奖结果-乘车券-弹框" data-index="{{index}}"  data-obj="{{prizeResult}}" >
+        <block a:if="{{prizeResult.money}}" >
+          <view  class="money {{`money-${prizeResult.moneyLen}`}}">{{prizeResult.money}}</view>   
+         <!--<view  class="yuan">元</view> --> 
+        </block>    
+        <view  class="title">{{prizeResult.name}}</view>
+        <view class="tips">{{prizeResult.text1}}</view>    
+    </view>
+    <view a:elif="{{prizeResult.type==='LinkCoupons'}}" class="box2-item"  onTap="onLinkCouponsTap" onFirstAppear="onNopAppear" data-group="抽奖结果-链接券-弹框" data-index="{{index}}"  data-obj="{{prizeResult}}" >
+        <view class="icon">
+         <image mode="scaleToFill" src="{{helper.crossImage(prizeResult.picture)}}"></image>  
+        </view>     
+        <view  class="title">{{prizeResult.name}}</view>
+        <view class="result-button">去领取</view>    
+    </view>
+     <view a:elif="{{prizeResult.type==='NONE'}}" class="box3-item" onFirstAppear="onNopAppear" data-group="抽奖结果-次数用完-弹框" data-index="{{index}}"  data-obj="{{prizeResult}}" >
+      <image mode="scaleToFill" src="https://images.allcitygo.com/miniapp/202008/pic_gift.png"></image>  
+    </view>
+    <view slot="footer">
+    <view class="button-warp">
+     <view a:if="{{prizeResult.button1}}" class="modal-button1" catchTap="onPrizeResultTap1" data-seed="{{prizeResult.button1}}" data-obj="{{prizeResult}}" data-index="0"  data-group="抽奖结果按钮"  >{{prizeResult.button1}}</view>
+     <view a:if="{{prizeResult.button2}}" class="modal-button2" catchTap="onPrizeResultTap2"  data-seed="{{prizeResult.button2}}" data-obj="{{prizeResult}}"  data-index="1"  data-group="抽奖结果按钮" >{{prizeResult.button2}}</view>
+    </view>
+    </view>
+  </modal>
+
+</view>
+</block>

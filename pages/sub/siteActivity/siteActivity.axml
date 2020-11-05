@@ -1,0 +1,188 @@
+<view class="container">
+  <scroll-view
+    scroll-y="{{true}}"
+    style="height: 100%"
+    lower-threshold="{{200}}"
+    onScrollToLower="scrollToLower"
+  >
+    <view class="site-swiper" a:if="{{bannerList && bannerList.length > 0}}">
+      <swiper
+        indicator-active-color="#fff"
+        indicator-color="#ccc"
+        autoplay="{{ele_notice.scroll_isAutoPlay}}"
+        circular="true"
+        interval="{{ele_notice.scroll_interval}}"
+        indicator-dots="{{ele_notice.scroll_indicatorDots}}"
+      >
+        <block a:for="{{bannerList}}">
+          <swiper-item>
+            <view
+                    a:if="{{item &&item.img_src}}"
+              class="site-swiper_item"
+              data-msg="{{item}}"
+              data-group="广告位" data-index="{{index}}"
+              onTap="toBanner"
+              style="background-image: url('{{item.img_src}}');width:100%;"
+            />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="site-near">
+      <view class="near-header flex">
+        <view class="header-left flex">
+          <view class="icon">
+            <image mode="scaleToFill" src="../images/site.png"/>
+          </view>
+          <view class="h-tit"><text>附近站点活动</text></view>
+        </view>
+        <view class="header-right" onTap="toLookCity" a:if="{{!isShowBusActivity}}">
+          <text>附近暂无活动，查看全城活动</text>
+          <image mode="scaleToFill" src="../images/arrow.png"/>
+        </view>
+      </view>
+      <view class="near-map">
+        <map
+          id="mapSite"
+          scale="{{scale}}"
+          markers="{{markers}}"
+          latitude="{{latitude}}"
+          longitude="{{longitude}}"
+          setting="{{setting}}"
+          onTap="toLookCity"
+          show-location="{{true}}"
+          style="width: 100%; height: 224rpx;"
+        >
+        </map>
+        <view class="show-map" onTap="toLookCity" data-title="查看全城活动" data-group="附近站点活动"  >
+          <image mode="scaleToFill" src="../images/map-amp.png"/>
+        </view>
+      </view>
+    </view>
+    <view class="activity-swiper" a:if="{{isShowBusActivity}}">
+      <scroll-view
+        scroll-x="{{true}}"
+        style="display: flex;"
+      >
+        <view
+          class="activity-swiper_item activity-tem flex"
+          data-msg="{{item}}"
+          onTap="toActivityShop"
+          a:for="{{activityShopList}}"
+          data-group="附近站点活动" data-index="{{index}}"
+          key="swiper-item-{{index}}"
+        >
+          <view a:if="{{item && item.pictUrl}}" class="activity-left activity-swiper_left" style="background-image: url('{{item.pictUrl}}')">
+            <view class="swi-icon" a:if="{{item.buyReturnInfo}}">
+              <text>{{item.buyReturnInfo}}</text>
+            </view>
+          </view>
+          <view class="activity-right activity-swiper_right">
+            <view class="acti-r_htit">
+              <text class="one-ellipsis">{{item.skuName}}</text>
+            </view>
+            <view class="acti-r_ress" a:if="{{item.siteName}}">
+              <image mode="scaleToFill" src="../images/address.png"/>
+              <text>距{{item.siteName}}步行约{{item.siteDistance}}米</text>
+            </view>
+            <view class="acti-r_tags">
+              <button size="mini" class="set-btn" a:if="{{item.linelabel === '0'}}">常坐线路</button>
+              <button
+                size="mini"
+                a:if="{{item.lineName.length}}"
+                a:for="{{item.lineName}}"
+                a:for-item="lineItem"
+                a:for-index="lineIndex"
+                key="{{lineIndex}}">{{lineItem}}</button>
+            </view>
+            <view class="acti-r_price">
+              <text class="m-symbol">¥</text>
+              <text class="price-tit" a:if="{{item.sellingPrice}}">{{item.sellingPrice}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="site-local" a:if="{{hot_area}}">
+      <view class="local-header flex">
+        <view class="header-left flex">
+          <view class="icon">
+            <image mode="scaleToFill" src="../images/huo.png"/>
+          </view>
+          <view class="h-tit">
+            <text>{{hot_area.box_title}}</text>
+          </view>
+        </view>
+        <!-- <view class="header-right" a:if="{{labelList.length > 0}}">
+          <view data-group="筛选" catchTap="show">
+            <text>筛选</text>
+            <image mode="scaleToFill" src="../images/arrow.png"/>
+          </view>
+        </view> -->
+      </view>
+    </view>
+    <view class="condition-header">
+     <view class="condition">
+        <view  a:for="{{labelList}}" data-id="{{item.id}}" onTap="handleShopType" class= "kuang {{item.type ? 'selected':''}}" >{{item.name}}</view>
+      </view>
+    </view>
+    <view class="local-list">
+      <view class="activity-local_item activity-tem flex" a:for="{{localShopList}}" data-group="本地热门活动" data-index="{{index}}" data-msg="{{item}}" onTap="toHotShop">
+        <view a:if="{{item && item.pictUrl}}" class="activity-left activity-local_left" style="background-image: url('{{item.pictUrl}}')">
+          <view class="swi-icon" a:if="{{item.buyReturnInfo}}">
+            <text>{{item.buyReturnInfo}}</text>
+          </view>
+        </view>
+        <view class="activity-right activity-local_right">
+          <view class="acti-r_htit local-r_htit ellipsis">
+            <text>{{item.skuName}}</text>
+          </view>
+          <view class="acti-r_ress" a:if="{{item.siteName}}">
+            <image mode="scaleToFill" src="../images/address.png"/>
+            <text>距{{item.siteName}}步行约{{item.siteDistance}}米</text>
+          </view>
+          <view class="acti-r_tags local-r_tags">
+            <button size="mini" class="set-btn" a:if="{{item.linelabel === '0'}}">常坐线路</button>
+            <button
+                size="mini"
+                a:if="{{item.lineName.length}}"
+                a:for="{{item.lineName}}"
+                a:for-item="lineItem"
+                a:for-index="lineIndex"
+                key="{{lineIndex}}">{{lineItem}}</button>
+          </view>
+          <view class="acti-r_price">
+            <text class="m-symbol">¥</text>
+            <text class="price-tit" a:if="{{item.sellingPrice}}">{{item.sellingPrice}}</text>
+            <text class="m-symbol" style="color: #B3BAC5;font-size: 24rpx;">¥</text>
+            <text class="del-tit" a:if="{{item.marketPrice}}">{{item.marketPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- <view class="screen"  data-group="筛选" catchTap="hide" a:if="{{isShow}}">
+    <view class="screen-container" catchTap="show">
+      <view class="screen-header">
+        <text>筛选</text>
+      </view>
+      <view class="screen-type">
+        <text>活动标签</text>
+      </view>
+      <view class="screen-list">
+       <view
+          class="{{`screen-single ${selIndex === 0 ? 'screen-selScreen' : ''}`}}"
+          key="0"
+          data-index="0"
+          data-msg="{{item}}"
+          data-group="筛选"
+          catchTap="setShopType">
+          <text>杭州亲子</text>
+        </view>
+      </view>
+      <view class="screen-qr_btn" catchTap="qrScreening">
+        <text>确定</text>
+      </view>
+    </view>
+  </view> -->
+</view>

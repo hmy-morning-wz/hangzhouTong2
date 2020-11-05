@@ -1,0 +1,104 @@
+<!-- .axml -->
+<import-sjs name="helper" from="../../../utils/helper.sjs"/>
+<view class="container1">
+<block a:if="{{showGuidance}}" >
+<view class="tips-dialog" onTap="onCloseTap"  disable-scroll="{{true}}" >
+   <view class="warp" style="top: {{titleBarHeight+statusBarHeight-10}}px">
+   <view class="corner-warp" >
+ <view class="corner" ></view>
+ </view>
+ <view class="guidance-content"  onFirstAppear="onNopAppear" data-group="添加到首页"  >
+   <view> 点击<image class="more" mode="scaleToFill" src="https://images.allcitygo.com/miniapp/202008/more.png"/> 并选择“添加到首页” </view>
+   <view class="text1">{{guidanceDesc.text}}</view>
+   <image a:if="{{guidanceDesc.image}}" class="add-home" mode="scaleToFill" src="{{guidanceDesc.image}}"/>
+ </view>
+    </view>
+</view>
+</block>
+  <block a:if="{{kvBanner && kvBanner.sw=='ON' && kvBanner.image}}"> <!--KV -->
+    <view class="KV_head" data-obj="{{kvBanner}}"   data-group="KV" style="background: url({{helper.crossImage(kvBanner.image) || ''}}) no-repeat;">
+      <view class="prize" data-group="KV" onTap="openVoucherListTap"  > 我的奖品 </view>
+    </view>
+  </block>
+ <view a:else style="height:444rpx;"></view>   
+  <view  style=" position: relative;height:0rpx; margin-top:-222rpx"></view>   
+  <block a:if="{{humantohumanSet && humantohuman=='ON' && humantohumanSet.length}}" >  <!--红包周周领 -->  
+
+    <view class="box1">
+     <view class="box1-title">
+       <text>{{humantohumanTitle}}</text>
+    </view>
+    <view class="box1-in">
+     <view class="box1-item" a:for="{{humantohumanSet}}" onFirstAppear="onNopAppear" data-group="红包周周领" data-index="{{index}}" onTap="activityTap" data-obj="{{item}}" >
+        <view class="money {{`money-${item.moneyLen}`}}">{{item.money}}</view>        
+        <view  class="desc {{`desc-${item.moneyLen}`}}">最高</view>
+        <view  class="title">{{item.name}}</view>
+        <view class="tips">{{item.text1||''}}</view>
+        <view class="button">立即领取</view>
+         <!--  <image mode="scaleToFill" lazy-load src="{{helper.crossImage(item.image)}}"/> -->
+      </view>
+      </view>
+    </view>
+  </block>
+  <block a:if="{{draw=='ON' && tagMatch &&prizeList && prizeList.length==8}}">  <!--抽奖 -->
+  <view class="draw-box"  onFirstAppear="onNopAppear"  data-group="抽奖大转盘">
+   <view class="box-title">
+       <text>{{drawTextSet && drawTextSet.text1 ||''}}</text>
+    </view>
+  <view class="box-in">
+  <view class="title"> {{drawTextSet && drawTextSet.text2 ||''}} </view>
+  <fruit-slots slotsclass='freebus' width="666" rollTimes="1" prizeList="{{prizeList}}" prizeName="{{prizeName}}" disabled="{{disabled}}" currentIndex="{{currentIndex}}" onStart="onStart" onFinish="onFinish" />
+  
+  </view>
+  </view>
+    </block>
+<view a:if="{{guidanceDesc && guidanceDesc.tips}}" class="notice-box" onTap="onTapNotice">
+    <view class="text">   {{guidanceDesc && guidanceDesc.tips ||""}}  </view>
+  </view>
+  <block a:if="{{ruleRichText && draw=='ON' && tagMatch &&prizeList && prizeList.length==8}}" onFirstAppear="onNopAppear"  data-group="活动规则">  <!--规则 富文本-->
+   <view class="rule-box"> 
+    <view class="box-title">
+       <text>活动规则</text>
+    </view>
+    <view class="box-in"> 
+     <rich-text nodes="{{ruleRichText}}" ></rich-text>
+      </view>
+   </view>
+  </block>
+  <modal
+    a:if="{{modalOpened && prizeResult}}"
+    show="{{modalOpened}}"
+    showClose="{{true}}"
+    closeType="1"
+    className="{{prizeResult.typeClass}}"
+    onModalClick="onModalClick"
+    onModalClose="onModalClose"    
+  >
+    <view slot="header" class="header" >{{prizeResult.title}}</view>  
+    <view a:if="{{prizeResult.type==='BusCoupons'}}" class="box1-item" onFirstAppear="onNopAppear" data-group="抽奖结果-乘车券-弹框" data-index="{{index}}"  data-obj="{{prizeResult}}" >
+        <block a:if="{{prizeResult.money}}" >
+          <view  class="money {{`money-${prizeResult.moneyLen}`}}">{{prizeResult.money}}</view>   
+         <!--<view  class="yuan">元</view> --> 
+        </block>    
+        <view  class="title">{{prizeResult.name}}</view>
+        <view class="tips">{{prizeResult.text1}}</view>    
+    </view>
+    <view a:elif="{{prizeResult.type==='LinkCoupons'}}" class="box2-item"  onTap="onLinkCouponsTap" onFirstAppear="onNopAppear" data-group="抽奖结果-链接券-弹框" data-index="{{index}}"  data-obj="{{prizeResult}}" >
+        <view class="icon">
+         <image mode="scaleToFill" src="{{helper.crossImage(prizeResult.picture)}}"></image>  
+        </view>     
+        <view  class="title">{{prizeResult.name}}</view>
+        <view class="button">去领取</view>    
+    </view>
+     <view a:elif="{{prizeResult.type==='NONE'}}" class="box3-item" onFirstAppear="onNopAppear" data-group="抽奖结果-次数用完-弹框" data-index="{{index}}"  data-obj="{{prizeResult}}" >
+      <image mode="scaleToFill" src="https://images.allcitygo.com/miniapp/202008/pic_gift.png"></image>  
+    </view>
+    <view slot="footer">
+    <view>
+     <view a:if="{{prizeResult.button1}}" class="button1" catchTap="onPrizeResultTap1" data-seed="{{prizeResult.button1}}" data-obj="{{prizeResult}}" data-index="0"  data-group="抽奖结果按钮"  >{{prizeResult.button1}}</view>
+     <view a:if="{{prizeResult.button2}}" class="button2" catchTap="onPrizeResultTap2"  data-seed="{{prizeResult.button2}}" data-obj="{{prizeResult}}"  data-index="1"  data-group="抽奖结果按钮" >{{prizeResult.button2}}</view>
+    </view>
+    </view>
+  </modal>
+  <view class="bottom-box"> </view>
+</view>

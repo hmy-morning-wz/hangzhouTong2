@@ -1,0 +1,9 @@
+
+<template name="tpl-loading">
+	<view class="loading-wrap">
+	    <view class="loading-circle_loading_wrap">
+	      <image src="../../img/bus.png" class="loading-bus"/>
+	    </view>
+	    <view class="loading-info-wrap">{{info}}</view>
+	</view>
+</template>

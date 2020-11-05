@@ -1,0 +1,1489 @@
+.container-index {
+  background: white;
+ -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+}
+
+
+
+
+.activity {
+  background: rgba(255, 255, 255, 1);
+  flex-wrap: wrap;
+  display: flex;
+  //height: 171rpx;
+  justify-content: left;
+  align-items: center;
+  padding-top: 38rpx;
+  // 27rpx;
+  top:-1px;
+  position: relative;
+}
+
+.activityBg .bottom_line{
+height: 1rpx;
+background: rgba(0, 0, 0, 0.1);
+margin-left: 24rpx;
+margin-right: 24rpx;
+}
+
+
+
+
+
+
+
+.unclaimed-contanier {
+  display: flex;
+  justify-content: center;
+  width: 750rpx;
+  height: 160rpx;
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  align-items: center;
+}
+
+
+.unclaimed-contanier .clear {
+  font-size: 27rpx;
+  position: absolute;
+  right: 24rpx;
+  bottom: 125rpx;
+  color: #7A869A;
+}
+
+.unclaimed-contanier .newCard {
+  width: 750rpx;
+  height: 160rpx;
+}
+
+.newCard image {
+  width: 750rpx;
+  height: 160rpx;
+}
+
+
+.unclaimed-contanier .newCard .card-disc {
+  display: flex;
+  justify-content: center;
+  min-width: 336rpx;
+  font-size: 24rpx;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight: 400;
+  color:rgba(46,49,82,1);
+  position: absolute;
+  left: 247rpx;
+  top: 64rpx;
+  line-height:44rpx;
+  height:44rpx;
+}
+
+.unclaimed-contanier .newCard .card-disc::after {
+  content: "去领取  >";
+  margin-left: 44rpx;
+  height:44rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(26,151,255,1);
+  line-height:44rpx;
+}
+
+
+.noticeContainer {
+  /* background: #fff; */
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bus-stop {
+  height: 112rpx;
+  background: rgba(255, 255, 255, 1);
+  margin-top: 16rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.busIcon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 24rpx;
+}
+
+.busIcon image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.busStopName {
+  height: 48rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(9, 30, 66, 1);
+  line-height: 48rpx;
+  margin-left: 24rpx;
+}
+
+.distance {
+  margin-right: 8rpx;
+  height:40rpx;
+font-size:24rpx;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(122,134,154,1);
+line-height:40rpx;
+}
+
+.collapse {
+  height: 72rpx;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(37, 56, 88, 1);
+}
+
+.collapse .locationInfo {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(24, 144, 255, 1);
+  line-height:40rpx;
+  height: 40rpx;
+
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+}
+
+.arrow image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.letContainer {
+  display: flex;
+}
+
+.openView {}
+
+.containerBlock {
+  width: 658rpx;
+  height: 120rpx;
+  background:rgba(245,252,255,1);
+
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16rpx;
+  /* padding-right: 20px; */
+}
+
+.containerBlock .content {
+  width: 506rpx;
+  font-size: 28rpx;
+ 
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(66, 82, 110, 1);
+  text-overflow:ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ word-wrap: break-word;
+white-space: normal !important;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+
+.rightArrow image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 40rpx;
+}
+
+.containerBlockBg {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomView {
+  height: 72rpx;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(24, 144, 255, 1);
+}
+
+.scrollView {
+  padding-bottom: 16rpx;
+}
+
+.swiperContainer {
+  margin-top: 24rpx;
+}
+
+.redPacket {
+  width: 702rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin: 0 24rpx;
+}
+.redPacket button {
+   height: 160rpx;
+  width: 100%;
+  border-radius: 8rpx;
+}
+.redPacket image {
+  height: 100%;
+  width: 100%;
+  border-radius: 8rpx;
+}
+
+.goodsList-Container {
+  /* padding-right: 24rpx; */
+  padding-bottom: 30px;
+}
+
+.spikeArea {
+  width: 702rpx;;
+  margin: 0 24rpx;
+  /* height:432rpx; */
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8rpx;
+  padding-top: 32rpx;
+}
+
+
+
+.downIcon image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 4rpx;
+}
+
+.addBg {
+  
+   height: 698rpx;
+  position: relative;
+}
+
+.addBg .bigAdd {
+  width: 100%;
+  height: 368rpx;
+}
+
+.addContainer {}
+
+.addItem {
+  width: 750rpx;
+  height: 160rpx;
+}
+.addItem button {
+  width: 750rpx;
+  height: 160rpx;
+}
+
+
+.addItem image {
+  width: 100%;
+  height: 100%;
+
+}
+
+.luckDraw {
+  margin-top: 56rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.luckDraw .leftLabel {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(9, 30, 66, 1);
+}
+.more{
+  height:40rpx;
+font-size:24rpx;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(122,134,154,1);
+line-height:40rpx;
+}
+
+.luckDraw .rigtLabel {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(122, 134, 154, 1);
+  display: flex;
+  align-items: center;
+  width: 72rpx;
+  height: 40rpx;
+}
+
+.rigtLabel .arrow image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.reactArrow image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.taskContainer {
+  margin-top: 56rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.taskContainer .leftLabel {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(9, 30, 66, 1);
+}
+
+.taskContainer .rigtLabel {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(122, 134, 154, 1);
+  display: flex;
+  align-items: center;
+}
+
+.luckDrawItem {
+  width: 702rpx;
+  height: 160rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goBtn {
+  /* margin-right: 28rpx; */
+  margin-left: 37rpx;
+  text-align: center;
+  width:168rpx;
+height:64rpx;
+background:linear-gradient(135deg,rgba(33,182,255,1) 0%,rgba(24,144,255,1) 100%);
+border-radius:32rpx;
+}
+
+.goBtn .text {
+margin-top: 16rpx;
+height:32rpx;
+font-size:24rpx;
+font-family:PingFangSC-Medium;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:32rpx;
+}
+
+.goBtn image {
+  width: 168rpx;
+  height: 64rpx;
+}
+
+.leftIcon .bigAdd {
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 8rpx;
+  margin-left: 24rpx;
+}
+
+.leftIcon .task {
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+  margin-left: 24rpx;
+}
+
+.luckDisc {
+  margin-left: 24rpx;
+  height: 112rpx;
+}
+
+.luckDisc .title {
+  width:309rpx;
+height:44rpx;
+font-size:28rpx;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+line-height:44rpx;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+.luckDisc .subtitle {
+  margin-top: 16rpx;
+ 
+  height:40rpx;
+font-size:24rpx;
+font-family:PingFangSC-Medium;
+font-weight:500;
+color:rgba(255,88,77,1);
+line-height:40rpx;
+}
+
+.luckDrawItemContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24rpx;
+}
+
+.noticeIcon image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 32rpx;
+}
+
+.activityText {
+  width: 56rpx;
+  height: 32rpx;
+  background: rgba(255, 241, 240, 1);
+  border-radius: 4rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 88, 77, 1);
+  line-height: 32rpx;
+  text-align: center;
+  margin-left: 16rpx;
+}
+
+.notice-content {
+  width: 504rpx;
+  height: 44rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(66, 82, 110, 1);
+  margin-left: 12rpx;
+  display: flex;
+  align-items: center;
+}
+
+.notice-arrow image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 24rpx;
+  margin-left: 34rpx;
+}
+
+.swiper-notice {
+  width: 510rpx;
+  height: 44rpx;
+  overflow: hidden;
+  white-space: nowrap;
+white-space: nowrap;
+text-overflow: ellipsis; 
+display: flex;
+align-items: center;
+display: inline-block;
+line-height: 44rpx;
+
+}
+
+.demo-swiper {
+  height: 49rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.box.top, .box.bottom {
+  height: 200px;
+}
+
+.box.left, .box.right {
+  width: 200px;
+  height: 100%;
+}
+
+.box {
+  justify-content: center;
+  align-items: center;
+  max-height: 896rpx;
+  background:rgba(255,255,255,1);
+  border-radius:20px 20px 0px 0px;
+}
+
+.box .title {
+padding-top: 40rpx;
+text-align: center;
+width:750rpx;
+height:48rpx;
+font-size:32rpx;
+font-family:PingFangSC-Medium;
+font-weight:500;
+color:rgba(9,30,66,1);
+line-height:48rpx;
+}
+
+
+.box .close {
+  position: absolute;
+  display: block;
+  top:24rpx;
+  right: 44rpx;
+  height: 40rpx;
+  width: 40rpx;
+  background: url("/images/popup/close.png") center no-repeat;
+  background-size: 40rpx 40rpx;
+
+}
+
+.voucherInfoList{
+  margin-top:40rpx; 
+  max-height: 768rpx;
+  min-height: 616rpx;
+  width: 750rpx;
+
+}
+
+.msg-item {
+  width: 702rpx;
+  height: 192rpx;
+  margin-bottom: 24rpx;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+}
+
+.msg-left {
+  width: 196rpx;
+  height: 192rpx;
+  border-top:1px solid rgba(223,225,230,1);
+  border-bottom:1px solid rgba(223,225,230,1);
+}
+.msg-right {
+  position: relative;
+  width: 362rpx;
+  height: 192rpx; 
+  background:rgba(254,255,254,1);
+  border-top:1px solid rgba(223,225,230,1);
+  border-bottom:1px solid rgba(223,225,230,1);
+}
+.msg-end{
+  width: 144rpx;
+  height: 192rpx;
+  border-radius:0px 4px 4px 0px;
+  border-top:1px solid rgba(223,225,230,1);
+  border-bottom:1px solid rgba(223,225,230,1);
+  border-right:1px solid rgba(223,225,230,1);
+}
+
+
+
+.msg-money-text {
+  height:72rpx;
+  max-width: 176rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break:keep-all;
+  white-space:nowrap; 
+  font-size:56rpx;
+  font-family:Avenir-Black;
+  font-weight:900;
+  color:rgba(255,255,255,1);
+  line-height:72rpx;
+}
+.msg-money-text:before {
+  content: "¥"; 
+  width:19rpx;
+  height:48rpx;
+  font-size:32rpx;
+  font-family:Avenir-Heavy;
+  font-weight:800;
+  color:rgba(255,255,255,1);
+  line-height:48rpx;  
+}
+
+.msg-use{
+  overflow: hidden;
+  margin-top:10rpx; 
+  text-overflow: ellipsis;
+  word-break:keep-all;
+  white-space:nowrap;  
+  width:100rpx;
+  height:28rpx;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:28rpx;
+}
+.msg-red {
+  border: 1px solid #DA2645;
+  color: #DA2645;
+}
+
+.top24{
+  margin-top:24rpx; 
+}
+
+.left24{
+  margin-left:24rpx; 
+}
+.bottom24{
+  margin-bottom: 24rpx; 
+}
+
+.msg-title{
+  display: flex;
+}
+
+.msg-coupon {
+  background:linear-gradient(135deg,rgba(71,203,255,1) 0%,rgba(24,144,255,1) 100%);
+  border-radius:16rpx;
+  border: 1px solid #378FE1;
+  color: #378FE1;
+  height: 32rpx;
+  width: 84rpx;
+  text-align: center;
+  display: inline-block;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:32rpx;
+
+}
+
+
+.msg-voucherName {
+ 
+  font-family: PingFangSC-Medium;
+  width: 338rpx;
+  max-height: 88rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+font-size:28rpx;
+font-weight:500;
+color:rgba(9,30,66,1);
+line-height:44rpx;
+
+}
+
+.voucher-busq-type {
+  content: "乘车券";  
+  position: absolute;
+  top:30rpx;
+  left:24rpx;
+  background:linear-gradient(135deg,rgba(71,203,255,1) 0%,rgba(24,144,255,1) 100%);
+  border-radius:16rpx;
+  border: 1px solid #378FE1;
+  color: #378FE1;
+  height: 30rpx;
+  padding-left:12rpx; 
+  padding-right:12rpx; 
+  text-align: center;
+  display: inline-block;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:30rpx;
+  margin-right: 16rpx;
+}  
+
+
+.voucher-busredbag-type {   
+  content: "乘车红包";   
+  position: absolute;
+  top:30rpx;
+  left:24rpx;
+  background:linear-gradient(135deg,rgba(71,203,255,1) 0%,rgba(24,144,255,1) 100%);
+  border-radius:16rpx;
+  border: 1px solid #378FE1;
+  color: #378FE1;
+  height: 30rpx;
+  padding-right:12rpx; 
+  padding-left:12rpx; 
+  text-align: center;
+  display: inline-block;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:30rpx;
+  margin-right: 16rpx;
+}  
+
+.voucher-yhq-type {   
+  content: "优惠券";   
+    position: absolute;
+  top:30rpx;
+  left:24rpx;
+  background:linear-gradient(135deg,rgba(255,132,87,1) 0%,rgba(255,82,93,1) 100%);
+  border-radius:16rpx;
+  border: 1px solid #FF8457;
+  color: #FF8457;
+  height: 30rpx;
+  padding-left:12rpx; 
+  padding-right:12rpx; 
+  text-align: center;
+  display: inline-block;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:30rpx;
+  margin-right: 16rpx;
+
+} 
+
+.voucher-busq::before {
+  content: " ";
+  margin-left: 100rpx;
+}  
+.voucher-busredbag::before { 
+ content: " ";
+  margin-left: 120rpx;
+}
+.voucher-yhq::before {
+   content: " "; 
+  margin-left: 100rpx;
+}
+
+.msg-brandName {
+  font-family: PingFangSC-Regular;
+  font-size: 20rpx;
+  color: #333333;
+  line-height: 40rpx;
+  width: 320rpx;
+}
+
+.msg-time-new {
+  position: absolute;
+  bottom: 0rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,88,77,1);
+  line-height:40rpx;
+}
+
+.msg-go{
+text-align: center;
+width:99rpx;
+border-radius:21rpx;
+border:2rpx solid rgba(255,88,77,1);
+font-size:24rpx;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(255,88,77,1);
+line-height:42rpx;
+}
+
+.modal-footer{
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+}
+
+
+.banner-container{ 
+  background: white;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
+   width: 750rpx;
+  .ad-banner {      
+    width: 686rpx;
+  }
+}
+
+.form-btn{
+    background: none;
+    border: none; 
+    height: 94rpx;  
+}
+.middle_banner {
+  width: 750rpx;
+  height: 200rpx;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+  background:rgba(255,255,255,1);
+}
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.banner_scroll {
+  overflow: auto;
+  border-radius: 10rpx;
+   white-space: nowrap;
+  max-height: 176rpx;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+}
+.banner_item {
+  position: relative;
+  width:336rpx;
+  height:152rpx;
+  text-align: center;
+  margin-top: 24rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+}
+.banner_image {
+  width:336rpx;
+height:152rpx;
+margin: 0 auto;
+border-radius:4rpx;
+border-width: 0rpx;
+}
+.supernatant_ad {
+  position: fixed;
+  top: 72.05%;
+  right: 24rpx;
+  width: 176rpx;
+  height: 176rpx;
+  border-radius:100rpx;
+  z-index: 10;
+   -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.disappend {
+  right: 12px;
+    -moz-transform: scale(1) rotate(-360deg) translate(0px);
+    -webkit-transform: scale(1) rotate(-360deg) translate(0px);
+    -o-transform: scale(1) rotate(-360deg) translate(0px);
+    transform: scale(1) rotate(-360deg) translate(0px);
+}
+.p1_chip1
+{
+ animation: chip1 0.4s linear 1;
+ /* Safari 和 Chrome: */
+ -webkit-animation: chip1 0.4s linear 1;
+}
+@keyframes chip1{
+ 0% {transform:translate3d(0%,0%,0);}
+ 100% {transform:translate3d(200%,0%,0);}
+}
+
+@-webkit-keyframes chip1 {
+ 0% {-webkit-transform:translate3d(0%,0%,0);}
+ 100% {-webkit-transform:translate3d(200%,0%,0);}
+}
+
+.p1_chip2
+{
+ animation: chip1 0.2s linear 1;
+ /* Safari 和 Chrome: */
+ -webkit-animation: chip2 0.2s linear 1;
+}
+@keyframes chip2{
+ 0% {transform:translate3d(150%,0%,0);}
+ 100% {transform:translate3d(0%,0%,0);}
+}
+
+@-webkit-keyframes chip2 {
+ 0% {-webkit-transform:translate3d(150%,0%,0);}
+ 100% {-webkit-transform:translate3d(0%,0%,0);}
+}
+
+
+.line-gray {
+  height: 16rpx;
+  width:750rpx;
+  background:#ffffff;
+}
+
+
+.activityBg {  
+  background: #fff;  
+}
+
+
+
+.activity .activityBtn{
+  position: relative;
+  width: 25%;
+  height: 171rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.activityBtn .activityContainer {
+  height: 171rpx;
+}
+
+.activityContainer .activity-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.activityContainer  .activity-icon image {
+  margin-top: 24rpx;
+  width: 64rpx;
+  height: 64rpx;  
+}
+
+.activityContainer .logo {
+  position: absolute;
+  /* padding: 0 6rpx; */
+  height: 32rpx;
+  border-radius: 16rpx 16rpx 16rpx 4rpx;
+  border: 1rpx solid rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  left: 50%;
+  background:linear-gradient(135deg,rgba(255,132,87,1) 0%,rgba(255,82,93,1) 100%);
+
+}
+
+.activityContainer  .logo .descFont {
+  height: 20rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 20rpx;
+  text-align: center;
+  padding-left: 8rpx;
+  padding-right: 10rpx;
+  white-space:nowrap;
+
+
+}
+
+
+
+
+
+
+.activityContainer  .activity-title {
+  width: 100%;
+  height: 42rpx;
+  font-size: 26rpx;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight: 400;
+  color: rgba(9, 30, 66, 1);
+  line-height: 42rpx;
+  margin-top: 16rpx;
+  display: flex;
+  justify-content: center;
+}
+
+@import "./template/cardbox.less";
+
+
+/* bannerList */
+.benner-area {
+  background: #fff;
+}
+.banner-swiper {
+  width: 686rpx;
+  height: 168rpx;
+  margin: 34rpx auto 49rpx;
+}
+.banner-swiper-item {
+  width: 100%;
+  height: 100%;
+}
+.banner-swiper-item image {
+  display: block;
+  width: 686rpx;
+  height: 168rpx;
+}
+.banner-title {
+  padding-left: 32rpx;
+  margin-bottom: 1rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 52rpx;
+}
+.humantohuman-body {
+  margin: 0 auto;
+  width: 686rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.humantohuman-body image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.banner2-title {
+  padding: 48rpx 0 24rpx 32rpx;
+}
+/* .banner2-swiper {
+  height: 240rpx;
+} */
+.banner2-swiper-item {
+  width: 440rpx;
+  height: 240rpx;
+  /* margin: 0 auto; */
+  transform: scale(0.9);
+}
+.active-banner-item {
+  transform: scale(1);
+}
+.recommend-title {
+  padding: 48rpx 0 16rpx 32rpx;
+}
+.for-location {
+  width: 638rpx;
+  height: 96rpx;
+  padding: 0 24rpx;
+  margin: 16rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f7ff;
+  border-radius: 16rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #9aaaca;
+  line-height: 42rpx;
+}
+
+.for-location .location-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 136rpx;
+  height: 56rpx;
+  background: #0081ff;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.recommend-list {
+  background: white;
+  padding: 0 32rpx;
+  /* -moz-column-count:2; 
+  -webkit-column-count:2; 
+  column-count:2;
+  -moz-column-gap: 14rpx;
+  -webkit-column-gap: 14rpx;
+  column-gap: 14rpx; */
+}
+.has-more {
+  padding-top: 50rpx;
+  padding-bottom: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #9aaaca;
+  line-height: 32rpx;
+}
+.has-more image {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.has-more  .loading{
+animation:turn 1s linear infinite;      
+}
+
+@keyframes turn{
+      0%{-webkit-transform:rotate(0deg);}
+      25%{-webkit-transform:rotate(90deg);}
+      50%{-webkit-transform:rotate(180deg);}
+      75%{-webkit-transform:rotate(270deg);}
+      100%{-webkit-transform:rotate(360deg);}
+}
+
+
+
+/*****/
+
+
+.dialog {
+  position: fixed;
+  bottom: 18px;
+}
+.tips-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  .warp{
+    position: relative;
+    .corner-warp{
+       position: relative;
+     height: 159rpx;
+     width: 750rpx;
+    .corner {
+    top:0rpx;
+    right: 100rpx;
+    width: 40rpx;
+    height: 160rpx;
+    transform: rotate(180deg);
+    position: absolute;
+    background: url('/images/icon/corner.svg') center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+  
+.guidance-content {
+  position: relative;
+  color: #fff;
+  width: 600rpx-40;
+  margin-left:100rpx; 
+  background: linear-gradient(190deg,#57a7ff -1%, #0f83ff 91%);
+  padding-left: 40rpx;
+  padding-bottom: 32rpx;
+  padding-top: 32rpx;
+  border-radius: 24rpx;
+
+  .more{
+    margin-left:6px; 
+    margin-right:6px; 
+    width: 39rpx;
+    height: 6rpx;
+  }
+  .text1{   
+height: 40rpx;
+font-size: 26rpx;
+font-family: PingFangSC, PingFangSC-Medium;
+font-weight: 500;
+text-align: left;
+color: #ffe558;
+line-height: 40rpx;
+  }
+  .add-home {
+     margin-top: 16rpx;
+     width: 492rpx;
+     height: 120rpx;
+  }
+}
+
+}
+}
+
+.opt-button {
+  width: 51px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+  border: #68BAF7 solid 1rpx;
+}
+
+.add-home {
+  width: 72px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #56ADEB;
+  color: #fff;
+  font-size: 14px;
+}
+
+.am-tips-dialog .am-button {
+  border: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  background-color: white;
+}
+
+.row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #888;
+  margin-right: 12px;
+}
+
+.notice-box {
+  margin-top: 56rpx;
+  position: relative;
+   height: 88rpx;
+   width: 690rpx;
+background: #0f82ff;
+border-radius: 24rpx;
+ 
+  .text {   
+   margin-left:24rpx;  
+   height: 88rpx;
+   font-size: 26rpx;
+   font-family: PingFangSC, PingFangSC-Regular;
+   font-weight: 400;
+   text-align: left;
+   color: #ffffff;
+   line-height: 88rpx;
+   letter-spacing: -1px;
+  }
+}
+
+
+
+/*****/
+
+
+
+.modal-type{
+width: 550rpx;
+height: 588rpx;
+background: linear-gradient(180deg,#fffeec, #ffedd5);
+border-radius: 24rpx;
+display: flex;
+justify-content: top;
+flex-flow: column;
+align-items: center;
+align-content: center;
+.am-modal-content {
+  padding-top: 64rpx;
+}
+.am-modal-footer::before{
+display: none;
+}
+.header {
+height: 52rpx;
+font-size: 36rpx;
+font-family: PingFangSC, PingFangSC-Medium;
+font-weight: 500;
+text-align: center;
+color: #c8904c;
+line-height: 52rpx;
+}
+.box1-item {
+     position: relative;
+     width: 480rpx;
+     height: 152rpx;
+     margin-top: 32rpx;
+     background: url('https://images.allcitygo.com/miniapp/202008/BG_quan2.png');
+     background-size: 100% 100% !important; 
+     .money {
+        overflow: hidden;
+        left: 32rpx;
+        bottom: 36rpx;
+        position: absolute;
+height: 80rpx;
+font-family: PingFangSC, PingFangSC-Semibold;
+font-weight: 600;
+text-align: left;
+color: #dd282a;
+line-height: 80rpx;
+letter-spacing: 2px;
+        }
+      .money-1{
+          font-size: 72rpx;
+      }
+      .money-2{
+          font-size: 72rpx;
+      }
+      .money-3{
+          left: 28rpx;
+          font-size: 60rpx;
+      }
+      .money-4{
+          font-size: 44rpx;
+      }
+     .money::after {
+       content: "元";       
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFangSC, PingFangSC-Semibold;
+    font-weight: 600;
+    text-align: left;
+    color: #dd282a;
+    line-height: 50rpx;
+    letter-spacing: 1rpx;
+        }
+    
+        .title {
+          overflow: hidden;
+          padding: 0;
+          left: 206rpx;
+          top: 29rpx;
+          position: absolute;        
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFangSC, PingFangSC-Semibold;
+    font-weight: 600;
+    text-align: left;
+    color: #333333;
+    line-height: 50rpx;
+  }
+        .tips {
+                left: 206rpx;
+          bottom: 29rpx;
+          position: absolute;
+         
+    height: 37rpx;
+    font-size: 26rpx;
+    font-family: PingFangSC, PingFangSC-Regular;
+    font-weight: 400;
+    text-align: left;
+    color: #cc914d;
+    line-height: 37rpx;
+    }
+          
+}
+.box2-item  {
+  position: relative;
+  width: 480rpx;
+  height: 152rpx;  
+  background:linear-gradient(180deg,#ffbdad,  #FFd7c1);
+  border-radius: 24rpx;
+  .icon {
+    position: absolute;
+    overflow: hidden;
+    left:26rpx;
+    top:36rpx;
+    width: 80rpx;
+    height: 80rpx;    
+    border-radius: 50%;
+    background: #ffffff;
+     image {
+     width: 80rpx;
+    height: 80rpx; 
+    }
+  }
+  .title {
+    left: 80rpx+26+26;
+    right: 80rpx+26+26;
+    top: 152rpx/2-25;
+    width: 100%;
+    position: absolute; 
+    overflow: hidden;
+    padding: 0;            
+    height: 50rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC, PingFangSC-Semibold;
+    font-weight: 600;
+    text-align: left;
+    color: #333333;
+    line-height: 50rpx;
+  }
+  .result-button {
+    right:26rpx;
+    top: 152rpx/2-32;
+    position: absolute; 
+    padding-left: 24rpx;   
+    padding-right: 24rpx;        
+    height: 64rpx;
+    background: linear-gradient(180deg,#ff7b4f, #dd282a 100%);
+    border-radius: 32rpx;  
+    font-size: 26rpx;
+    font-family: PingFangSC, PingFangSC-Semibold;
+    font-weight: 600;
+    text-align: left;
+    color: #ffffff;
+    line-height: 64rpx;
+  }
+}
+.box3-item {
+  image {
+    width: 258rpx;
+    height: 200rpx;
+  }
+}
+.button-warp {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  .modal-button1 {          
+          overflow: hidden;  
+          width: 400rpx;
+          height: 72rpx;
+          background: linear-gradient(180deg,#ff7b4f, #dd282a 100%);
+          border-radius: 40rpx;
+          font-size: 28rpx;
+          font-family: PingFangSC, PingFangSC-Medium;
+          font-weight: 500;
+          text-align: center;
+          color: #ffffff;
+          line-height: 72rpx;
+}
+  .modal-button2 {    
+          margin-top: 24rpx;
+          overflow: hidden;   
+          width: 400rpx;
+          height: 72rpx;
+          background: transparent;
+          border: 2px solid #dd282a;
+          box-sizing: border-box;
+          border-radius: 40rpx;
+          font-size: 28rpx;
+          font-family: PingFangSC, PingFangSC-Medium;
+          font-weight: 500;
+          text-align: center;
+          color: #dd282a;
+          line-height: 72rpx;
+
+}
+}
+.am-modal-close {
+  width: 44rpx;
+  height: 11rpx;
+  top:588rpx+32;
+  right: 550rpx/2-22;
+}
+}
+

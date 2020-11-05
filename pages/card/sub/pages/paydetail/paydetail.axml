@@ -1,0 +1,37 @@
+<view style="background: #FFF;">
+  <view class="white_space_lg"></view>
+  <view class="am-wingblank am-wingblank-sm">
+    <view class="amount_title">
+        {{info.rechargeAmmount}} 元
+    </view>
+    <view class="order_state">
+        {{info.status}}
+    </view>
+    <view>
+      <view class="line_ul">
+        <view class="line_li">
+          <text class="line_title">充值类型 </text>
+          <text class="line_text">{{accConfig}} </text>
+        </view>
+        <view class="line_li">
+          <text class="line_title">充值卡号 </text>
+          <text class="line_text">{{info.cardId}} </text>
+        </view>
+        <view class="line_li">
+          <text class="line_title">充值订单号 </text>
+          <text class="line_text">{{info.orderId}} </text>
+        </view>
+        <view class="line_li">
+          <text class="line_title">支付宝订单号 </text>
+          <text class="line_text">{{info.payOrderId}} </text>
+        </view>
+        <view class="line_li">
+          <text class="line_title">充值时间 </text>
+          <text class="line_text">{{info.gmtCreate}} </text>
+        </view>
+        </view>
+        <view class="clearLine"></view>
+    </view>
+    <view class="am-list-footer"></view>
+  </view>
+</view>

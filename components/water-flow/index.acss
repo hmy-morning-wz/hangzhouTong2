@@ -1,0 +1,122 @@
+.water-flow-container {
+  display   : flex;
+  width     : 100%;
+  box-sizing: border-box;
+  background: white;
+}
+
+.water-column {
+  flex: 1
+}
+
+.recommend-item {
+  width: 336rpx;
+  margin-bottom: 16rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 0 8rpx 0 rgba(0, 0, 0, 0.08);
+  break-inside: avoid;
+}
+.recommend-top {
+  width: 100%;
+  position: relative;
+}
+.recommend-img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-radius: 16rpx 16rpx 0 0;
+}
+.item-label {
+  position: absolute;
+  left: 16rpx;
+  bottom: 14rpx;
+  width: 64rpx;
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff5b59;
+  border-radius: 16rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  line-height: 28rpx;
+}
+.recommend-bot {
+  padding: 12rpx 16rpx;
+}
+.item-name {
+  margin-bottom: 4rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-align: start;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */ 
+  -webkit-line-clamp: 2;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 40rpx;
+  letter-spacing: -1rpx;
+}
+.store-name {
+  margin-bottom: 8rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.35);
+  line-height: 32rpx;
+}
+.price-line {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4rpx;
+}
+.price-line .sell-price {
+  margin-right: 8rpx;
+  font-size: 40rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #ff5b59;
+  line-height: 48rpx;
+  letter-spacing: -1rpx;
+}
+.price-line .sell-price text {
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #ff5b59;
+  line-height: 34rpx;
+  letter-spacing: -1rpx;
+}
+.price-line .original-price {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-decoration: line-through;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 32rpx;
+  letter-spacing: -1rpx;
+}
+.sale-info {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.35);
+  line-height: 32rpx;
+}

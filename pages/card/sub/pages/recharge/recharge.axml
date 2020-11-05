@@ -1,0 +1,47 @@
+<import src="../../templates/loading/index.axml" />
+
+<template name="product-card">
+	<view class="priceRect {{exceed ? 'amt-disabled-selected' : (selected ? 'priceSelected' : 'b')}}" data-index="{{index}}" onTap="{{onTap}}">
+	<!-- <view class="priceRect" data-index="{{index}}" onTap="{{onTap}}"> -->
+		<text>{{label}}</text>
+	</view>
+</template>
+
+<block>
+	<template is="tpl-loading" a:if="{{loading}}" data="{{}}" />
+	<view class="wrap" a:else>
+	  <view class="info-list main-item-wrap">
+	  	<view class="info-item">
+	  		<view class="info-item-title">充值卡号</view>
+	  		<view class="info-item-content">{{card.cardId}}</view>
+	  	</view>
+	  	<view>
+	  		<picker onChange="onChangeType" value="{{selectedTypeIdx}}" range="{{rechargeableList}}" range-key="name">
+	  			<view class="info-item">
+	  				<view class="info-item-title">充值类型</view>
+	    			<view class="info-item-content info-item-extra line-content">
+	    				<text>{{rechargeableList[selectedTypeIdx].name}}</text>
+	    				<view class="menu-sub-arrow"></view>
+	    			</view>
+	    		</view>
+	  		</picker>
+	  	</view>
+	</view>
+	<view class="price-wrap main-item-wrap">
+		<view>
+		  	<block a:for={{info.list}}>
+		  		<template is="product-card" data="{{ ...item, index, onTap: 'onTapPrice', selected: (selectedPriceIdx === index) }}"/>
+		  	</block>
+		  </view>
+		  <view class="fixButtom">
+			  <button type="primary" disabled="{{!cardActive || selectedPriceIdx < 0 || recharging}}" onTap="onClickPay">确认支付</button>
+			  <view class="shortcut-wrap">
+			  		<text class="short-link" onTap="onTapAutoRecharge">自动充值</text> | <text class="short-link" onTap="onTapRechargeLog">充值记录</text>
+			  </view>
+			</view>
+		</view>
+		<view style="position: relative;left:10px;top:10px;">
+			<text>当前余额<text style="color: #108EE9;">{{balance}}</text>元, 最多还可充<text style="color: #108EE9;">{{upper}}</text>元</text>
+		</view>
+  </view>
+</block>

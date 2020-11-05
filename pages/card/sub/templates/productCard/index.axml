@@ -1,0 +1,5 @@
+<template name="product-card">
+	<view class="priceRect {{exceed ? 'amt-disabled-selected' : (selected ? 'priceSelected' : 'b')}}" data-index="{{index}}" onTap="{{onTap}}">
+		<text>{{label}}</text>
+	</view>
+</template>

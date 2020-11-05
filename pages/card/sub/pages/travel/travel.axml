@@ -1,0 +1,51 @@
+<import src="../../templates/loading/index.axml" />
+
+<block>
+  <template is="tpl-loading" a:if="{{loading}}" data="{{}}" />
+  <view class="win" a:else>
+    <list>
+      <view slot="header">
+        <!-- 日期部分start -->
+        <view class="month_label" onTap="chooseMonth">
+        <view class="floatLeft">
+          <text>{{month}}</text>
+        </view>
+        <view class="floatRight">
+          <image src="../../img/calendar70.png" class="cal_img"/>
+        </view>
+        <view class="clearLine"></view>
+        </view> 
+        <!-- 日期部分end -->
+      </view>
+        <block a:if="{{itemNum != 0}}">
+          <block a:for="{{list}}">
+            <list-item                        
+              arrow="{{hasArrow}}"
+              onClick="onTravelDetail"
+              index="{{index}}"
+              key="list-{{index}}"
+              last="{{index === (list.length - 1)}}"
+            >
+            {{item.lineName}}
+              <view class="am-list-brief">{{item.gmtBizTime}}</view>
+              <view slot="extra">
+                -{{item.amount}} 元
+              </view>
+            </list-item>
+          </block>
+          <view slot="footer">
+            <view hidden="{{!innerLoading}}" style="text-align:center;">加载中...</view>              
+          </view>
+        </block>
+        <block a:else>
+          <view class="nodata">
+            <image style="width: 220px; height:61px;" mode="aspectFit" src="../../img/img_nothing.png"/>
+            <view>
+              <text style="font-size: 10px;">暂无数据</text>
+            </view>
+          </view>
+        </block>
+    </list>
+  </view>    
+</block>
+

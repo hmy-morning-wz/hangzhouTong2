@@ -1,0 +1,70 @@
+<import-sjs name="helper" from="../../utils/helper.sjs"/>
+
+<view class="l-class water-flow-container" a:if="{{data.length!==0}}">
+  <view class="water-column" style="margin-right:{{columnGap}}">
+    <view id="left">
+      <block a:for="{{leftData}}" >
+        <view  onFirstAppear="onNopAppear" data-group="口碑生活圈(左)" data-obj="{{item}}" data-index="{{index}}"  key="water-flow-item-left-{{index}}" class="recommend-item" onTap="toKBDetail" data-url="{{item.itemDetailUrl}}">
+          <view class="recommend-top">
+            <image class="recommend-img" lazy-load mode="widthFix" src="{{helper.crossImage(item.itemCover)}}"/>
+            <view a:if="{{item.itemLabel}}" class="item-label">  
+                {{item.itemLabel}}
+            </view>
+          </view>
+          <view class="recommend-bot">
+            <view class="item-name">
+                {{item.itemName}}
+            </view>
+            <view class="store-name">
+                {{item.itemStore && item.itemStore.storeName}}
+            </view>
+            <view class="price-line">
+              <view class="sell-price">
+                <text>￥</text>{{item.sellPrice}}
+              </view>
+              <view class="original-price">
+                  ￥{{item.originalPrice}}
+              </view>
+            </view>
+            <view class="sale-info">
+                {{item.salesInfo}}
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="water-column">
+    <view id="right">
+      <block a:for="{{rightData}}">
+        <view   onFirstAppear="onNopAppear" data-group="口碑生活圈(右)" data-index="{{index}}" data-obj="{{item}}" key="water-flow-item-right-{{index}}" class="recommend-item" onTap="toKBDetail" data-url="{{item.itemDetailUrl}}">
+          <view class="recommend-top">
+            <image class="recommend-img" lazy-load mode="widthFix" src="{{helper.crossImage(item.itemCover)}}"/>
+            <view a:if="{{item.itemLabel}}" class="item-label">  
+                {{item.itemLabel}}
+            </view>
+          </view>
+          <view class="recommend-bot">
+            <view class="item-name">
+                {{item.itemName}}
+            </view>
+            <view class="store-name">
+                {{item.itemStore && item.itemStore.storeName}}
+            </view>
+            <view class="price-line">
+              <view class="sell-price">
+                <text>￥</text>{{item.sellPrice}}
+              </view>
+              <view class="original-price">
+                  ￥{{item.originalPrice}}
+              </view>
+            </view>
+            <view class="sale-info">
+                {{item.salesInfo}}
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

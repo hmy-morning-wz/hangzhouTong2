@@ -1,0 +1,29 @@
+<import-sjs name="helper" from="../../../utils/helper.sjs"/>
+<template name="bannerList">
+  <view class="benner-area">
+    <swiper 
+      a:if="{{banner}}"
+      class="banner-swiper"
+      autoplay
+      interval="3000"
+      circular
+      >
+      <block a:for="{{bannerList}}">
+        <swiper-item key="swiper-item-{{index}}">
+          <view onFirstAppear="onNopAppear" data-group="重运营区" data-index="{{index}}" onTap="activityTap" data-obj="{{item}}" class="banner-swiper-item">
+            <image mode="scaleToFill" lazy-load src="{{helper.crossImage(item.image)}}"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view a:if="{{humantohuman}}">
+      <view class="banner-title">
+        福利天天领
+      </view>
+
+      <view id="humantohuman" class="humantohuman-body"  onFirstAppear="onNopAppear" data-group="福利天天领" onTap="activityTap" data-obj="{{humantohumanSet}}">
+        <image mode="scaleToFill" lazy-load src="{{helper.crossImage(humantohumanSet.image)}}"/>
+      </view>
+    </view>
+  </view>
+</template>

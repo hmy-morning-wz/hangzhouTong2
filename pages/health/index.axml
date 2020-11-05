@@ -1,0 +1,50 @@
+<view class="main">
+  <view class="header">
+    <view class="title">签到累积健康金</view>
+    <view class="content">
+      <view class="text">{{sumAmount}}</view>
+      <view class="lineHeight mr34">元</view>
+      <view class="lineHeight" onTap="hanldeUse">去使用</view>
+      <view class="arrow-icon"></view>
+    </view>
+    <view class="sign-in">
+      <view class="sign-firs-line">
+        <view>本周已签到
+         <text style="color:#0080FF">{{activeIndex}}次</text>
+        </view>
+        <view onTap="handleOpen">签到规则</view>
+      </view>
+      <view>
+        <steps className="demo-steps-class" activeIndex="{{activeIndex}}" items="{{items}}" />
+      </view>
+    </view>
+  </view>
+  <view class="detail">
+    <health-tabs></health-tabs>
+  </view>
+  <view class="bg" a:if="{{isSiginShow}}">
+    <view class="health-popup" onFirstAppear="onNopAppear" data-group="签到成功">
+      <view class="popup-title">
+        <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/check.png"/>
+        <text>签到成功</text>
+      </view>
+      <view class="follw-img"></view>
+      <view class="health-number">{{couponAmount}}元健康金</view>
+      <view class="health-button" onTap="hanldeReceive">去使用</view>
+    </view>
+  </view>
+  <view class="bg"  a:if="{{isRule}}">
+    <view class="rule-popup">
+      <view class="rule-title">打卡规则</view>
+      <view class="rule-content">
+        <view> 1、每天签到，领取随机福利；</view>
+        <view> 2、每天只能签到一次，漏签到不能补；</view>
+        <view> 3、一个签到周期为7天，每一期的福利会有所同哦；</view>
+        <view> 4、签到成功后，点击去使用按钮，在【支付宝—健康金】中查看明细；</view>
+        <view> 5、签到领取的健康金会累加，可在【支付宝-健康 金】中使用；</view>
+        <view> 6、健康金的有效使用期可在【支付宝-健康金】中 查看；</view>
+      </view>
+    </view>
+    <image class="close" onTap="handleClsoe" mode="scaleToFill" src="https://images.allcitygo.com/healthGold/close.png"/>
+  </view>
+</view>

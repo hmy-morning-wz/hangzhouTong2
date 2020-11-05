@@ -1,0 +1,25 @@
+<import-sjs name="helper" from="../../../utils/helper.sjs"/>
+<template name="iconbox">
+ <block>  
+  <view class="activityBg">    
+      <view class="activity">  
+      <view a:for="{{ele_box_icon}}" key="keys-{{index}}" class="activityBtn">
+        <view onFirstAppear="onNopAppear" onTap="activityTap" data-group="图标区域" data-index="{{index}}" data-obj="{{item}}" data-spmId="${spmAPos}.${spmBPos}.c01.d02"  data-scm="{{`\${system}.\${subsystem}.icon.${item.icon_id}.\${traceId}`}}"  class="activityContainer">
+          <view a:if="{{item.icon_desc }}" class="logo">
+              <text class="descFont">{{item.icon_desc}}</text>
+          </view>
+          <view class="activity-icon">            
+            <form  report-submit onSubmit="onSubmit">
+              <button class="form-btn" hover-class="none" form-type="submit">
+                <image a:if="{{item.icon_img}}" src="{{helper.crossImage(item.icon_img,{height:56,width:56})}}" mode="aspectFit"></image>
+              </button>
+            </form>
+          </view>
+          <view class="activity-title">{{item.icon_name}}</view>
+      </view>  
+       </view>      
+  </view>
+  
+</view>
+ </block>
+ </template>

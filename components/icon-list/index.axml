@@ -1,0 +1,20 @@
+<view>
+  <!--ICON-->
+  <view class="travel-service" a:if="{{service_icon && service_icon.ele_icons && service_icon.ele_icons.length}}">
+    <view class="travel-h">
+      <text>{{service_icon.box_title}}</text>
+    </view>
+    <view class="travel-con">
+      <view class="teavel-item" a:for="{{service_icon.ele_icons}}" data-index="{{index}}" data-group="{{service_icon.box_title}}" data-obj="{{item}}" onTap="toService">
+        <view class="item-top-right-{{mode}}" a:if="{{mode}}" ></view>
+         <view a:elif="{{item.icon_desc}}" class="logo">
+              <text class="descFont">{{item.icon_desc}}</text>
+            </view>
+        <view class="item-back" style="background-image: url({{item.icon_img || ''}})"></view>
+        <view class="item-tit">
+          <text>{{item.icon_name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

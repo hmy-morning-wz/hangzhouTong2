@@ -1,0 +1,5 @@
+{
+  "usingComponents": { 
+        "ant-skeleton":"ant-skeleton/components/skeleton/skeleton"
+  }
+}

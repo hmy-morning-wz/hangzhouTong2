@@ -1,0 +1,74 @@
+<!-- <import src="/app.acss" /> -->
+<view>
+   <view class="white_space_lg"></view>
+   <view class="am-wingblank am-wingblank-sm">
+       <view class="title">
+           <image class="title_img" src="{{iconUrl|| ''}}" mode="aspectFit" />
+           <text>{{info.subject}}</text>
+       </view>
+       <view class="amount">
+           -{{info.amount}} 元
+        </view>
+        <view class="order_state">
+           {{info.status}}
+        </view>
+        <view >
+             <view class="line_ul">
+                <view class="line_li">
+                     <text class="line_title">流水号 </text>
+                     <text class="line_text">{{info.seqNo}} </text>
+                </view>
+                <view class="line_li">
+                     <text class="line_title">电子卡号 </text>
+                     <text class="line_text">{{info.cardId}} </text>
+                </view>
+                <view class="line_li" a:if="{{info.chargeName != null}}">
+                     <text class="line_title">计费类型 </text>
+                     <text class="line_text">{{info.chargeName}} </text>
+                </view>
+                <view class="line_li" a:if="{{info.accountTypeName != null}}">
+                     <text class="line_title">支付渠道 </text>
+                     <text class="line_text">{{info.accountTypeName}} </text>
+                </view>
+                <view class="line_li" a:if="{{info.alipayOrderNo != null && info.alipayOrderNo != ''}}">
+                     <text class="line_title">支付宝单号 </text>
+                     <text class="line_text">{{info.alipayOrderNo}} </text>
+                </view>
+                    
+                <view class="line_li">
+                     <text class="line_title">乘车时间 </text>
+                     <text class="line_text">{{info.gmtBizTime}} </text>
+                </view>
+                
+                <view class="line_li" a:if="{{info.lineName != null}}">
+                     <text class="line_title">公交线路 </text>
+                     <text class="line_text">{{info.lineName}} </text>
+                </view>
+
+                <view class="line_li" a:if="{{info.startStationName != null}}">
+                     <text class="line_title">上车站点 </text>
+                     <text class="line_text">{{info.startStationName}} </text>
+                </view>
+
+                <view class="line_li" a:if="{{info.endStationName != null}}">
+                     <text class="line_title">下车站点 </text>
+                     <text class="line_text">{{info.endStationName}} </text>
+                </view>
+
+                <view class="line_li" a:if="{{info.info != null}}">
+                     <text class="line_title">车辆信息 </text>
+                     <text class="line_text">{{info.info}} </text>
+                </view>
+
+                <view class="line_li" a:if="{{info.driverId != null}}">
+                     <text class="line_title">设备ID </text>
+                     <text class="line_text">{{info.driverId}} </text>
+                </view>
+
+                    
+            </view>
+            <view class="clearLine"></view>
+        </view>
+        <view class="am-list-footer"></view>
+   </view>
+</view>

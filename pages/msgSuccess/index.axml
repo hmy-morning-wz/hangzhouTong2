@@ -1,0 +1,13 @@
+<view class="container">
+  <lifestyle publicId="2018052160219015" />
+  <view style="background-color:#fff;" class="text-container">
+    <view class="mark-text">
+     进入众城通生活号，反馈意见、分享故事，赢取免费乘车！
+    </view>
+  </view>
+  <view style="margin-top:80rpx;" class="text-container flex flex-column justify-center align-center">
+    <image class="success" src="https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/mini/success.png" />
+    <view class="mark-desc">已完成</view>
+    <view class="mark-footer" onTap="handleBack">返回{{name}}</view>
+  </view>
+</view>

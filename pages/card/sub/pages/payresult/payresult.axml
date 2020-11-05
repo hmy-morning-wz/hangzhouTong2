@@ -1,0 +1,29 @@
+<view class="container">
+	<view a:if="{{done}}">
+		<view class="content" a:if="{{status == PayStatus.SUCCESS}}">
+			<icon type="success" color="green" size="60"/>
+			<view class="msg">支付成功</view>
+			<view class="btn-wrap">
+				<button type="warn" class="btn" size="defaultSize" plain onTap="back">确定</button>
+			</view>
+		</view>
+		<view class="content" a:elif="{{status == PayStatus.ERROR}}">
+			<icon type="clear" color="red" size="60"/>
+			<view class="msg">失败</view>
+			<view class="btn-wrap">
+				<button type="warn" class="btn" size="defaultSize" plain onTap="back">返回</button>
+			</view>
+		</view>
+		<view class="content" a:else>
+			<icon type="clear" color="red" size="60"/>
+			<view class="msg">{{desc}}</view>
+			<view class="btn-wrap">
+				<button type="warn" class="btn" size="defaultSize" plain onTap="back">返回</button>
+			</view>
+		</view>
+	
+	</view>
+<!-- 	<view a:else>
+		<icon type="waiting" color="yellow" size="60"/>
+	</view> -->
+</view>

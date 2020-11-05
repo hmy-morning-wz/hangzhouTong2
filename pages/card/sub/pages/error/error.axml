@@ -1,0 +1,11 @@
+<view>
+    <page-result
+        type="{{type}}"
+        title="{{title}}"
+        brief="{{detail}}"
+    >
+    </page-result>
+    <view class="am-page-result-btns error-btn">
+        <view onTap="backHome">回到首页</view>
+    </view>
+</view>

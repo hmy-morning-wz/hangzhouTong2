@@ -1,0 +1,71 @@
+<view class="health-tabs">
+   <view class="tabs">
+      <view class="left-tab {{currentActive == 1 ?'active':''}}" onTap="handleClick" data-state="1">健康金是什么</view>
+      <view class="right-tab {{currentActive == 2 ?'active':''}}" onTap="handleClick" data-state="2">健康金怎么花</view>
+   </view>
+   <view class="left-contennt" a:if="{{currentActive == 1}}">
+      <view class="explain">健康金是支付宝为用户免费赠送的一系列健康保障福利。 用户可通过一系列活动累积健康金，健康金包含以下:</view>
+      <view class="list">
+         <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/icon1.png"/>
+         <view class="list-right">
+            <view>住院报销额度</view>
+            <view>可用于免费报销住院费用</view>
+         </view>
+      </view>
+      <view class="list">
+         <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/icon2.png"/>
+         <view class="list-right">
+            <view>大病保障金</view>
+            <view>重大疾病确诊后，一次性申请</view>
+         </view>
+      </view>
+      <view class="list">
+         <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/icon3.png"/>
+         <view class="list-right">
+            <view>住院报销额度</view>
+            <view>可用于免费报销住院费用</view>
+         </view>
+      </view>
+      <view class="bottom" onTap="hanldeDetail">详细了解健康金>></view>
+   </view>
+   <view class="right-contennt" a:else>
+      <view class="explain">领取的健康金额度可用于：:</view>
+      <view class="user">
+         <view class="modular mr22">
+            <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/health_icon1.png"/>
+            <view>在线理赔</view>
+            <view class="second">攒多少报多少</view>
+         </view>
+         <view class="modular mr22 bg2">
+            <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/health_icon2.png"/>
+            <view>公益捐助</view>
+            <view class="second">帮助贫困儿童</view>
+         </view>
+         <view class="modular bg3">
+            <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/health_icon3.png"/>
+            <view>福利兑换</view>
+            <view class="second">低价得好物</view>
+         </view>
+      </view>
+      <view class="process">
+         <view class="process-modular ml24">
+            <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/pic.png"/>
+            <view>医院就诊</view>
+            <view>保留凭证</view>
+         </view>
+         <view class="arrow"></view>
+          <view class="process-modular">
+            <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/icon_up.png"/>
+            <view>上传凭证</view>
+            <view>申请报销</view>
+         </view>
+         <view class="arrow"></view>
+          <view class="process-modular">
+            <image mode="scaleToFill" src="https://images.allcitygo.com/healthGold/icon.png"/>
+            <view>审核通过</view>
+            <view>金额到账</view>
+         </view>   
+      </view>
+      <view class="bottom" onTap="hanldeDetail">详细了解健康金>></view>
+   </view>
+</view>

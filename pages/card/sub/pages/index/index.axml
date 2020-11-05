@@ -1,0 +1,24 @@
+<view class="container">
+  <tab cardType="" />
+  <view class="card">
+    <image src="{{cardLogo|| ''}}" class="card-img" mode="widthFix" />
+  </view>
+  <view>
+    <list class="list">
+      <list-item>
+        卡号
+        <view slot="extra" class="card-id">{{cardId}}</view>
+      </list-item>
+      <block a:for={{menus}}>
+        <list-item 
+          arrow
+          key="item-{{index}}"
+          index="{{item.code}}"
+          last="{{index === (menus.length - 1)}}" 
+          onClick="onMenuItemClick">
+          {{item.name}}
+        </list-item>
+      </block>
+    </list>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<import-sjs name="helper" from="../../../utils/helper.sjs"/>
+<template name="banner2List">
+  <view class="benner-area">
+    <view class="banner-title banner2-title">
+      热门推荐
+    </view>
+    <swiper 
+      class="banner2-swiper" next-margin="132rpx"  previous-margin="20rpx" 
+      onChange="swiperChange"
+      >
+      <block a:for="{{banner2List}}">
+        <swiper-item key="swiper-item-{{index}}" item-id="{{index}}" data-item-id="{{index}}">
+          <view onFirstAppear="onAppear"  data-group="热门推荐" style="width: 100%;height: 240rpx;" onTap="activityTap" data-obj="{{item}}">
+            <view class='banner2-swiper-item {{ index === currentTarget ? "active-banner-item" : ""}}'
+              style="background: url({{helper.crossImage(item.image)}});background-size: 100% 100%;">              
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</template>

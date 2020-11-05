@@ -1,0 +1,6 @@
+{
+  "barButtonTheme": "default",
+  "usingComponents": {
+    "popup": "/components/mini-antui/popup/index"
+  }
+}

@@ -1,0 +1,80 @@
+.msg-box .title {
+  height: 44rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(9, 30, 66, 1);
+  line-height: 44rpx;
+}
+
+.msg-box .date {
+  position: absolute;
+  right: 32rpx;
+  height: 44rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(179, 186, 197, 1);
+  line-height: 44rpx;
+}
+
+.msg-box .extra-box {
+  margin-right: 32rpx;
+  height: 48rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(66, 82, 110, 1);
+  line-height: 48rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.no-msg {
+  margin-top: 320rpx;
+  text-align: center;
+}
+
+.no-msg .imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer image {
+  width: 256rpx;
+  height: 256rpx;
+}
+
+.read-box {
+  position: fixed;
+  right: 32rpx;
+  bottom: 104rpx;
+  width: 104rpx;
+  height: 104rpx;
+  background: linear-gradient(135deg, rgba(33, 182, 255, 1) 0%, rgba(24, 144, 255, 1) 100%);
+}
+.read-box .read-image {
+  width: 48rpx;
+  height: 48rpx;
+} 
+.read-box .read-text {
+width:40rpx;
+height:28rpx;
+font-size:20rpx;
+font-family:PingFangSC-Medium;
+font-weight:500;
+color:rgba(248,249,249,1);
+line-height:28rpx;
+} 
+
+
+.redDot {
+  position: absolute;
+  top: 50%;
+  right: 32rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background: rgba(255, 88, 77, 1);
+  border-radius: 16px;
+}

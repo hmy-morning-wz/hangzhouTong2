@@ -1,0 +1,11 @@
+<view>
+  <view  a:if="{{publicId && (showLife==='1')}}" class="life-bottom" >
+    <view class="life-close" onTap="closeLife">
+      <image mode="scaleToFill" src="https://images.allcitygo.com/miniapp/life/life_close.png"/>
+    </view>
+    <lifestyle a:if="{{publicId}}" publicId="{{publicId}}" onFollow="onFollow"/>  
+  </view>
+  <view a:if="{{showLife==='2'}}" class="life-help" onTap="openLife">
+    <image mode="scaleToFill" src="https://images.allcitygo.com/miniapp/life/life_help.png"/>
+  </view>
+</view>

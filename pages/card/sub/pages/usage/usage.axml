@@ -1,0 +1,16 @@
+<view>
+   <view class="a-collapse">
+    <view a:for={{faqs}}>
+      <view class="a-collapse-title" onTap="onTitleTap" data-index={{index}} >
+        {{item.question}}
+        <view class="{{item.expanded ? 'a-collapse-title-arrow a-collapse-title-arrow-up' : 'a-collapse-title-arrow'}}" />
+      </view>
+      <view class="a-collapse-content-view" a:if={{item.expanded}}>
+        <view class="a-collapse-content">
+             {{item.answer}}
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</view>

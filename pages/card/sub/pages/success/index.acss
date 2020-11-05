@@ -1,0 +1,35 @@
+.container {
+  background: #fff;
+}
+
+.hint {
+  text-align: center;
+  margin-bottom: 110rpx;
+}
+
+.hint image {
+  width: 88rpx;
+  margin-bottom: 14rpx;
+}
+
+.hint .hint-text {
+  font-size: 34rpx;
+  color: #108EE9;
+}
+
+.intro {
+  width: 72%;
+  margin: 0 auto;
+}
+
+.intro image {
+  width: 100%;
+}
+
+.btn {
+  position: absolute;
+  width: 64%;
+  left: 50%;
+  bottom: 160rpx;
+  transform: translate(-50%);
+}

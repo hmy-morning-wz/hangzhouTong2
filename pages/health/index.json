@@ -1,0 +1,11 @@
+{
+  "pullRefresh": false,
+   "titleBarColor": "#000",
+   "barButtonTheme": "light", 
+  "transparentTitle": "auto",
+  "defaultTitle": "出行健康金",
+  "usingComponents": {
+    "steps": "mini-ali-ui/es/steps/index",
+    "health-tabs": "/components/health-tabs/index"   
+  }
+}

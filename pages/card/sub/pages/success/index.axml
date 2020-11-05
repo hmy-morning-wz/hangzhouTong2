@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="hint">
+    <image src="../../img/success.png" mode="widthFix"></image>
+    <view class="hint-text">领卡成功</view>
+  </view>
+  <view class="intro">
+    <image src="../../img/intro.png" mode="widthFix"></image>
+  </view>
+  <view class="btn">
+    <button type="primary" plain>立即使用</button>
+  </view>
+</view>

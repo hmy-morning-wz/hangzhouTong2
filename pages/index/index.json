@@ -1,0 +1,13 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "onReachBottomDistance": 0,
+  "usingComponents": { 
+        "ant-skeleton":"ant-skeleton/components/skeleton/skeleton",         
+        "popmodal": "/components/modal/index",
+        "health-gold": "/components/health-gold/index",
+        "mask": "mini-ali-ui/es/mask/index",
+        "novice-guidance": "/components/novice-guidance/novice-guidance",
+        "water-flow": "/components/water-flow/index",  
+        "modal": "mini-ali-ui/es/modal/index"
+  }
+}

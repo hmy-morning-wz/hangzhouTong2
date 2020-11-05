@@ -1,0 +1,29 @@
+<view class="guidance-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{true}}">
+	<view class="guidance-modal-mask" onTap="onHandleNext">
+      <view class="guidance-jump" onTap="onHandleStart" data-group="新手引导"  data-seed="新手引导-跳过">
+        跳过
+      </view>
+      <view onAppear="onAppearFirst" a:if="{{showFirstGuidance}}" data-group="新手引导蒙层" data-seed="新手引导蒙层-公交红包" style="{{welfareStyle}}">
+        <view class="welfare-img">
+        </view>
+        <view class="welfare-desc-img">
+        <view class="welfare-desc">{{guidanceDesc.welfareDesc || ''}}</view>
+        </view>
+      </view>
+      <view onAppear="onAppearSecond" a:if="{{showSecondGuidance}}" data-group="新手引导蒙层" data-seed="新手引导蒙层-健康金签到" style="{{healthGoldtyle}}">
+        <view class="health-gold-desc-img">
+        <view class="health-gold-desc">{{guidanceDesc.healthGoldDesc || ''}}</view>
+        </view>
+        <view class="health-gold-img"></view>
+        
+      </view>
+      <view onAppear="onAppearThird" a:if="{{showThirdGuidance}}" data-group="新手引导蒙层" data-seed="新手引导蒙层-出行周边" style="{{thirdStyle}}" >
+        <view class="public-praise-img"></view>
+        <view class="public-praise-desc-img">
+        <view class="praise-desc">{{guidanceDesc.praiseDesc || ''}}</view>
+        </view>
+        <view class="start-experience" onTap="onHandleStart" data-group="新手引导"  data-seed="新手引导-开始体验">开始体验</view>
+      </view>
+  </view>
+	
+</view>

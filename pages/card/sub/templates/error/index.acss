@@ -1,0 +1,31 @@
+.am-result {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.42rem;
+    background-color: #fff;
+}
+
+.am-result-pic {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 auto;
+    line-height: 1.2rem;
+    background-size: 1.2rem 1.2rem;
+}
+
+.am-result-title {
+    margin-top: 0.3rem;
+    line-height: 1;
+}
+
+.am-result-message {
+    margin-top: 0.18rem;
+    line-height: 1.5;
+    font-size: 0.32rem;
+    color: #888;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+

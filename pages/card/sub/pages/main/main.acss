@@ -1,0 +1,47 @@
+page {
+  /* margin-bottom: 20px; */
+  background: #ffffff;
+}
+
+.card-bg {
+  width: 100%;
+  height: 200px;
+  background-size: 100% 100%;
+  background: #108EE9;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+
+.card-logo {
+  width: 100%;
+  height: inherit;
+  text-align: center;
+  position: relative;
+  background-size: 100% 100%;
+  top: 15px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-img {
+  width: 95%;
+}
+
+.card-no {
+  width: 85%;
+  position: absolute;
+  bottom: 80rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff;
+}
+
+.card-no-text {
+  position: absolute;
+  left: 20rpx;
+  font-family: PingFangSC-Medium;
+}

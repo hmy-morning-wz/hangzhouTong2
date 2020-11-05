@@ -1,0 +1,14 @@
+<view a:if="{{!loading}}" class="wrap">
+  <view class="a-result">
+    <icon class="a-result-pic" type="{{result}}" size="56" color="rgb(31, 144, 230)"></icon>
+    <view class="a-result-title">{{successTips}}</view>
+    <view class="a-result-message">{{successMessage}}</view>
+  </view>
+  <view class="white_space_md"></view>
+  <view class="a-result-button">
+    <button disabled="{{hasBind }}" onTap="onBind" type="primary">{{buttonText}}</button>
+  </view>
+   <view class="a-result-notice">
+    <image a:if="{{notice_img}}" src="{{notice_img}}" mode="aspectFit"></image>
+  </view>
+</view>

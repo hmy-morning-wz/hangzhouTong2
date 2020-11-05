@@ -1,0 +1,3 @@
+<import src="../../templates/loading/index.axml" />
+
+<template is="tpl-loading" data="{{info}}"></template>

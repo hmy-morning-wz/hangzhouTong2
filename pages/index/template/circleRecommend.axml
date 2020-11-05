@@ -1,0 +1,17 @@
+<template name="circleRecommend">
+  <view class="benner-area">
+    <view>
+      <view  id="recommendTitle" class="banner-title recommend-title">
+        出行·周边
+      </view>
+      <view a:if="{{!hasLocation}}" class="for-location">
+        <view>
+          开启定位服务，获得精准周边内容及优惠
+        </view>
+        <view class="location-btn" onTap="ifGetLocation">
+          去开启
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

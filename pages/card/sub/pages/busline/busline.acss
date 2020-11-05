@@ -1,0 +1,139 @@
+.wrap {
+    display: flex;
+    flex: 1;
+	flex-direction: column;
+	background-color: #f8f8fb;
+
+}
+
+.search-input_2 {
+	font-size: 35rpx;
+    width: 81%;
+    text-align: left;
+    display: block;
+    color: #000;
+	height: .75rem;
+	border-radius: 0.1rem;
+    border: 0;
+}
+
+.search-input_1 {
+	font-size: 35rpx;
+    width: 95%;
+    text-align: center;
+    display: block;
+    color: #bbb;
+	height: .75rem;
+	border-radius: 0.1rem;
+    border: 0;
+}
+
+.search-cancel_hidden {
+	position: fixed;
+	top: 1%;
+	right: -100px;
+}
+
+.search-cancel_show {
+    flex: none;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: 40rpx;
+    color: #108ee9;
+	text-align: right;
+	transition: margin-right .3s,opacity .3s;
+	transition-delay: .1s;
+	position: fixed;
+	top: 0.15rem;
+	left: 86%;
+}
+
+.am-list {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    background-color: #fff;
+}
+
+.am-list-body {
+	
+    position: relative;
+    background-color: #fff;
+	border-top: 1rpx solid #ddd;
+}
+
+.am-list-item {
+    position: relative;
+    padding-left: 0.3rem;
+    min-height: 0.88rem;
+    background-color: #fff;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: background-color 200ms;
+    align-items: center;
+}
+
+.am-list-line {
+    align-items: center;
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+    min-height: 0.88rem;
+    overflow: hidden;
+}
+
+.am-list-content {
+    flex: 1;
+    color: #000;
+    font-size: 0.34rem;
+    line-height: 1.5;
+    text-align: left;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 0.14rem;
+    /* padding-bottom: 0.14rem; */
+}
+
+.am-list-brief {
+    color: #888;
+    font-size: 0.3rem;
+    line-height: 1.5;
+    margin-top: 0.12rem;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.am-list-extra {
+    color: #000;
+    flex-basis: 36%;
+    font-size: 0.32rem;
+    line-height: 1.5;
+    text-align: right;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 0.14rem;
+    padding-bottom: 0.14rem;
+}
+
+.nodata{
+  text-align: center;
+  padding: 50px;
+  opacity:1;
+  /* background: #f8f8fb; */
+  margin-top: 20%;
+}
+.nodata text{
+  text-align: center;
+  color: #007ADB;
+  font-size: 24px;
+}
+

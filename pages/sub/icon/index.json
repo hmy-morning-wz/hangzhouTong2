@@ -1,0 +1,7 @@
+{
+  "titleBarColor": "#fff",
+  "usingComponents": { 
+       "icon-list":"/components/icon-list/index",
+        "popup": "/components/popup/index"
+  }
+}

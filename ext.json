@@ -1,0 +1,55 @@
+
+{
+  "extEnable": true,
+  "ext": {
+     "apiHost":{    
+    },
+   "cityInfo": {
+    "appid": "2019031163539131",
+    "title":  "杭州通",
+    "cityName": "杭州",
+    "cityCode":  "330100"
+    },
+    "cardList":[{
+       "cardType": "T0330100",
+       "balanceMode":"NORMAL"     
+    },{
+       "cardType": "T2330100",
+       "balanceMode":"NONE"     
+    }],
+   "ad_tiny":"ad_tiny_2019031163539131_201909092200000754",
+    "publicId":"2018052160219015",
+    "pageJson": [
+        {
+        "pageUrl": "pages/index/index",
+        "locationId": "index4",
+        "locationName": "首页",
+        "templateId": "20"
+      },     
+      {
+        "pageUrl": "pages/me/me",
+        "locationId": "my",
+        "locationName": "我的",
+        "templateId": "8"
+      },
+      {
+        "pageUrl": "pages/siteActivity/siteActivity",
+        "locationId": "site",
+        "locationName": "站点生活",
+        "templateId": "9"
+      },    
+      {
+        "pageUrl": "pages/cardDetail/index",
+        "locationId": "cardDetail",
+        "locationName": "卡详情",
+        "templateId": "11"
+      }, 
+      {
+        "pageUrl": "pages/icon/index",
+        "locationId": "icon",
+        "locationName": "全部服务",
+        "templateId": "15"        
+      }
+    ]
+  }
+}

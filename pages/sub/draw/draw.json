@@ -1,0 +1,11 @@
+{
+   "backgroundColor": "#F5F5F5",
+    "titleBarColor": "#108EE9",
+  "pullRefresh": false,
+  "barButtonTheme": "light", 
+  "transparentTitle": "auto",
+  "usingComponents": {
+    "fruit-slots": "../components/fruit-slots/index",
+    "modal": "mini-ali-ui/es/modal/index"
+  }
+}

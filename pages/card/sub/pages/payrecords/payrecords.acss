@@ -1,0 +1,54 @@
+page {
+    width: 100%;
+    background: #f8f8fb;
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.month_label {    
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: #888888;
+    background: #f8f8fb;
+    height: 0.325rem;
+}
+
+.floatLeft {
+    float: left;    
+}
+
+.floatRight {
+    float: right;    
+}
+
+.cal_img {
+    width: 0.32rem;
+    height: 0.32rem;
+    opacity: 0.5;
+}
+
+.paying {
+    color: #f76a24;
+    padding-right: 0.15rem;
+    font-size: 0.28rem;
+}
+
+.am-list-arrow {
+    visibility: visible !important;
+}
+
+.nodata{
+  text-align: center;
+  padding: 50px;
+  opacity:1;
+  /* background: #f8f8fb; */
+  /* margin-top: 30%; */
+}
+.nodata text{
+  text-align: center;
+  color: #007ADB;
+  font-size: 24px;
+}
+@import "/pages/card/sub/templates/loading/index.acss";

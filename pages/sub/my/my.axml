@@ -1,0 +1,11 @@
+<view>
+ <view class="a-result">
+       <icon class="a-result-pic" type="success" size="56" color="rgb(31, 144, 230)" aria-label="success" />
+       <view class="a-result-title">{{userId}}</view>
+       <view class="a-result-message">{{cardNo}}</view>
+  </view>
+  <view class="white_space_md"></view>
+  <view class="a-result-button" >
+     <button type="default"  plain  onTap="onTap"> {{buttonText}}</button>
+  </view>  
+</view>

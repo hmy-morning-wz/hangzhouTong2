@@ -1,0 +1,32 @@
+
+<template name="card-recharge">
+	<view class="card">
+     
+	  
+		<view class="card-header" style="{{imageUrl? `background:  url('${imageUrl}') top no-repeat; background-size: 100%;`:'' }}"> <!--card-title-wrap-->
+	  	<view class="card-title">
+					<text >{{cardTitle||'-'}}</text>
+	  	</view>
+			<block  a:if="{{cardStatus=='received'}}">
+      <view class="card-balance" a:if="{{balanceTitle}}">
+					<text >余额: {{balanceTitle}}</text>
+			</view>	
+			<view class="card-no" a:if="cardId">
+					<text >No.{{cardId}}</text>
+			</view>	
+			</block>
+			<view class="card-balance" a:else>
+					<text >卡片未领取</text>
+			</view>	
+			 
+
+		</view>   <!--card-title-wrap-->
+
+		<view class="card-memo" a:if="{{memo}}" onTap="onMoreMemo"> 
+		   <view class="icon">
+				 
+			 </view> 
+			<view class="text">{{memo}} </view>
+		</view>
+	</view>
+</template>

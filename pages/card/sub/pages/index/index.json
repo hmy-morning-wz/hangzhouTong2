@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "电子公交卡",
+  "titleBarColor": "#108EE9",
+  "usingComponents": {
+    "card":"../../mini-antui/es/card/index",
+    "list": "../../mini-antui/es/list/index",
+    "list-item": "../../mini-antui/es/list/list-item/index",
+    "tab": "bus-tinyapp-components/es/tab/index"
+  }
+}

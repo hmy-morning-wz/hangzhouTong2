@@ -1,0 +1,80 @@
+/* .lifestyle {
+  position: fixed;
+  bottom: 68rpx;
+  width: 100%;
+  
+}
+
+lifestyle {
+  display:flex;
+font-size:26rpx;
+-webkit-box-align:center;
+align-items:center;
+background-color:rgba(0,0,0,1);
+width:728rpx;
+height:104rpx;
+
+border-radius:4rpx;
+opacity:0.4;
+
+
+font-family:PingFangSC-Regular,PingFang SC;
+font-weight:400;
+color:rgba(255,255,255,1);
+line-height:104rpx;
+margin-left: 11rpx;
+} */
+
+.life-bottom{
+  position: absolute;
+  bottom: 0rpx;
+  width:708rpx;
+  padding-left: 20rpx;
+  margin-left: 11rpx;
+  margin-right: 11rpx;
+  /* height:104rpx; */
+  background:#244480;
+  /*background: rgba(23,142,227,0.95);*/
+
+  border-radius:4rpx;
+  /* opacity:0.4; */
+
+}
+.life-close {
+  position: absolute;
+  width: 66rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.life-close image {
+  display: block;
+  width: 24rpx;
+  height: 24rpx;
+}
+lifestyle {
+  background:#244480;
+  border-radius:4rpx;
+  /* opacity:0.4; */
+  color: white;
+  margin-left: 26rpx;
+}
+.life-help {
+  position: fixed;
+  bottom: 160rpx;
+  right: 32rpx;
+  width:108rpx;
+  height:108rpx;
+  background:#244480;
+  box-shadow:0 6rpx 16rpx 0 rgba(0,0,0,0.1);
+  border-radius:54rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.life-help image {
+  display: block;
+  width: 48rpx;
+  height: 48rpx; 
+}

@@ -1,0 +1,4 @@
+
+<import src="../../templates/error/index.axml" />
+
+<template is="common-error" data="{{info}}"/>

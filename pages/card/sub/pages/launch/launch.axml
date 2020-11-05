@@ -1,0 +1,4 @@
+<import src="../../templates/loading/index.axml" />
+<view>
+     <template is="tpl-loading"  />
+</view>

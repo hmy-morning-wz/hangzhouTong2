@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="msg-box" a:if="{{items.length}}">
+    	<scroll-view style="height: 100vh;" scroll-y onScrollToLower="onScrollToLower">
+		<list>
+    <block a:for="{{items}}">
+      <list-item onClick="onItemClick" multipleLine="true" index="{{index}}" key="{{index}}" last="{{index === (items2.length - 1)}}">
+        <text class="title">{{item.title}}</text>
+        <text class="date">{{item.sendDate}}</text>
+        <view class="extra-box">{{item.content}}</view>
+        <view class="redDot" a:if="{{item.readStatus && item.readStatus==='NO_READ'}}"></view> 
+      </list-item>
+    </block>
+    </list>
+    </scroll-view>
+    <view calss="read-box" a:if="{{showReadIcon}}">
+      <view calss="read-box1">
+      <image mode="scaleToFill" src="../images/readMsg.png" class="read-box"/>
+      <text class="read-text">已读</text>
+        </view>
+    </view>
+  </view>
+  <view class="no-msg" a:else>
+    <view class="imageContainer">
+      <image mode="scaleToFill" src="../images/noData.png"/>
+    </view>
+    <view class="noCard">暂无信息</view>
+  </view>
+  <msg-box a:if="{{showMsgBox}}" msg="{{msg}}" onClose="onClose" hidden="{{ !showMsgBox }}"></msg-box>
+</view>

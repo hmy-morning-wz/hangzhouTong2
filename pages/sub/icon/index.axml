@@ -1,0 +1,57 @@
+<view class="container">
+  <!--MY ICON-->
+  <view class="my-service-box">
+    <view style="height:32rpx;"></view>
+    <view class="title">我的快捷功能</view>
+    <block a:if="{{myServiceIcon && myServiceIcon.length }}">
+      <view class="my-service-icon">
+        <view class="service-item" a:for="{{myServiceIcon}}" data-index="{{index}}" data-group="我的快捷功能" data-obj="{{item}}">
+          <view a:if="{{item.icon_img}}" class="item-icon" style="  background-size: cover;  background-repeat: no-repeat;background-image: url({{item.icon_img || ''}})"></view>
+        </view>
+      </view>
+    </block>
+    <button data-group="我的快捷功能" hover-class="none" data-seed="添加按钮" onTap="toAddMyService"><image class="bt_add" mode="aspectFit" src="../images/add.png"/>添加</button>
+    <view style="height:48rpx;"></view>
+  </view>
+  <!--ICON-->
+  <view style="height:16rpx;"></view>
+  <block a:for="{{service_group}}">
+    <icon-list service_icon="{{all_service[item.group_id]}}"></icon-list>
+  </block>
+  <popup show="{{showAddPop}}" position="bottom" onClose="onPopupClose1" disableScroll="{{false}}">
+    <view class="popup-box">
+      <view class="title"> 按住图标，拖动来调整顺序</view>
+      <view onTap="onPopupClose2" data-group="添加图标" data-seed="关闭" class="close"></view>
+      <view onTap="onPopupDone" data-group="添加图标" data-seed="完成" class="done">完成</view>
+      <scroll-view scroll-y trap-scroll >
+        <block a:if="{{myTempServiceIcon }}">
+          <view class="add-icon-box">
+            <view class="icon-box">
+            <movable-area style="height:{{myTempServiceIcon.length<=4?'186rpx' :'372rpx'}}" >
+               <view class="text1" a:if="{{myTempServiceIcon.length==0}}">添加常用功能至首页，下次查询更方便</view>
+              <movable-view  onChangeEnd="onMovableChangeEnd"  onChange="onMovableChange" onTouchEnd="onMovableTouchEnd" out-of-bounds="true" direction="all" a:for="{{myTempServiceIcon}}"  x="{{xy[index].x}}" y="{{xy[index].y}}" data-index="{{index}}" data-group="我的快捷功能编辑" data-obj="{{item}}"  >
+               <view class="item-box" a:if="{{item}}"> 
+                <view class="item-top-right-close" data-index="{{index}}" data-obj="{{item}}" data-group="我的快捷功能编辑" onTap="removeService"></view>
+                <view class="item-back" style="background-image: url({{item.icon_img || ''}})"></view>
+                <view class="item-tit">
+                  <text>{{item.icon_name}}</text>
+                </view>
+                 </view>
+              </movable-view>
+            </movable-area>
+             </view>
+            <view class="bottom">
+              <view class="line"></view>
+              <text class="text">以上功能展示在首页(最多7个)</text>
+              <view class="line"></view></view>
+          </view>
+           <view class="line-gray">             
+          </view>
+        </block>
+        <block a:for="{{service_group}}">
+          <icon-list mode="add" onService="toAddService" service_icon="{{all_service[item.group_id]}}"></icon-list>
+        </block>
+      </scroll-view>
+    </view>
+  </popup>
+</view>

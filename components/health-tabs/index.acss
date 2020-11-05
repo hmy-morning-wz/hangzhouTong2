@@ -1,0 +1,151 @@
+.tabs{
+  display: flex;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #9aaaca;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 36rpx 106rpx;
+}
+.left-tab{
+  position: relative;
+}
+.right-tab{
+  margin-left: auto;
+  position: relative;
+}
+
+.active{
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #191d33;
+}
+.active::after{
+  content: '';
+  height: 6rpx;
+  background-color: #0080FF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 44rpx;
+  bottom: -6rpx;
+}
+.explain{
+  font-size: 25rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #9daccb;
+  line-height: 37rpx;
+  margin: 0 24rpx 24rpx;
+}
+.health-tabs .list{
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  width: 638rpx;
+  height: 174rpx;
+  background: rgba(0,128,255,0.05);
+  border-radius: 16rpx;
+  margin: 0 auto 16rpx;
+  display: flex;
+  overflow: hidden;
+}
+.health-tabs .list image{
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  margin: 27rpx 24rpx;
+}
+.health-tabs .list-right view:nth-child(1){
+  font-size: 30rpx;
+  color: #191d33;
+  line-height: 42rpx;
+  margin: 43rpx 0 9rpx 0;
+}
+.health-tabs .list-right view:nth-child(2){
+  font-size: 25rpx;
+  color: #9daccb;
+}
+.user{
+  display: flex;
+  margin: 0 42rpx;
+}
+.user .modular{ 
+  width: 186rpx;
+  height: 228rpx;
+  background: #6bb4ff;
+  border-radius: 16rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  color: #ffffff;
+  text-align: center;
+}
+.mr22{
+   margin-right: 22rpx;
+}
+.user .modular image{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: 24rpx auto 20rpx;
+}
+.user .modular view:nth-child(1){
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.user .modular .second{
+  font-size: 24rpx;
+  font-weight: 400;
+  margin-top: 2rpx;
+}
+.bg2{
+  background: #ffbf79 !important;
+}
+.bg3{
+ background: #756bff !important;
+}
+.process{
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #9daccb;
+  width: 602rpx;
+  height: 174rpx;
+  background: rgba(0,128,255,0.05);
+  border-radius: 16rpx;
+  margin: 49rpx auto;
+  display: flex;
+  overflow: hidden;
+}
+.process-modular{
+  width: 96rpx;
+  margin-top: 16rpx;
+}
+.process-modular image{
+   width: 64rpx;
+   height: 64rpx;
+   display: block;
+   margin: 0 auto;
+}
+.arrow{
+  margin: 58rpx 56rpx 0 54rpx;
+  background: url("https://images.allcitygo.com/healthGold/arrow2.png") no-repeat;
+  background-size: 100% 100%;
+  width: 20rpx;
+  height: 20rpx;
+}
+ .ml24{
+   margin-left: 24rpx;
+ }
+ .bottom{
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #0080FF;
+  margin-top: 87rpx;
+  text-align: center;
+}

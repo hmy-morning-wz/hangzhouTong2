@@ -1,0 +1,68 @@
+<template name="cardbox">
+ <block>
+  <view a:if="{{busCardNum>0}}" class="card-wrap">
+  <view class="card-wrap-1"> 
+    <scroll-view  scroll-with-animation="{{false}}" scroll-animation-duration="{{500}}" scroll-into-view="{{`card${cardIndex}`}}" scroll-x="{{true}}" onTouchEnd="onCardTouchEnd" onScroll="onCardScroll" class="swiper-warp  {{busCardNum==1?'center':''}}"" previousMargin="{{cardIndex==0?'10rpx':'62rpx'}}" nextMargin="{{cardIndex==0?'60rpx':'10rpx'}}" 
+    current="{{cardIndex}}" 
+    indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" 
+    vertical="{{vertical}}" 
+    interval="{{interval}}"
+     circular="{{circular}}" 
+     onChange="cardSwiperChange">
+      <block a:if="{{eleCards.length>0}}" a:for="{{eleCards}}">
+        <view key="swiper-item-{{index}}" id="card{{index}}" >
+          <view a:if="{{item.imageUrl}}" 
+          onTap="cardDetail" data-group="首页卡面" data-index="{{index}}" data-obj="{{item}}" 
+          class="swiper-item {{busCardNum==1?'width1':'width2'}}  {{index==1?'left16 right32': busCardNum==2?'left32':'left32 right32'}}" style="background-image: url('{{`${item.imageUrl||''}`}}');overflow:hidden;background-position:left top;background-repeat:no-repeat;background-size:cover">
+            <view class="card-content">
+             <view a:if="{{cardMark && cardMark[item.cardType] && (cardMark[item.cardType].text|| cardMark[item.cardType].text1 ) }}" class="card-mark-bg"  catchTap="onCardmark" >  </view>
+             <view a:if="{{cardMark && cardMark[item.cardType] && cardMark[item.cardType].text1 }}" class="card-mark-text" catchTap="onCardmark" >
+               <text class="text1"> {{ cardMark[item.cardType].text1[0]}} </text>
+               <text class="{{cardMark[item.cardType].text1Large?'text2':'text3'}}"> {{ cardMark[item.cardType].text1[1]}} </text>
+               <text class="text1"> {{ cardMark[item.cardType].text1[2]}} </text>
+              </view>      
+
+                 <view a:if="{{cardMark && cardMark[item.cardType] && cardMark[item.cardType].text }}" class="card-mark-text-large" catchTap="onCardmark" >                  
+                 <text class="{{cardMark[item.cardType].text1Large?'text2':'text3'}}"> {{ cardMark[item.cardType].text}} </text>
+               </view>  
+
+              <view class="card-type">{{item.cardTitle}} </view>
+              <view class="balance" a:if="{{ item.balanceMode && item.status=== 'received' && typeof item.balance==='number'}}">余额:{{item.balance}}元</view>
+              <view class="card-NO" a:if="{{item.status=== 'received'}}">NO.{{item.cardNo}}</view>
+              
+            
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    
+      <view class="cardtapbg"></view>   
+    </view>   
+ <view class="cardtap">
+<view catchTap="onCatchTap">
+   <!--<form  report-submit onSubmit="riding" class="go-ride">-->
+   <view class="go-ride">
+    <!--<button class="form-btn" hover-class="none" form-type="submit">-->
+     
+      <view class="go-ride-wave"  catchTap="drawTap" a:if="{{draw=='ON' && tagMatch && drawText && remainLotteryNumber>0}}" >
+        <!-- wave ripple -->
+        <view class="go-ride-wave wave ripple">
+          <view class="circle"></view>
+          <view class="circle"></view>
+          <view class="circle"></view>        
+        </view>
+        <view class="image-warp" >  </view>       
+      </view>
+       <view a:else class="image1" onTap="riding"></view>
+      <!-- wave ripple -->
+    <!--</button>-->
+   </view> <!--</form>-->
+</view>
+</view>
+             
+          <view class="pop"  a:if="{{draw=='ON' && tagMatch && drawText && remainLotteryNumber>0}}" >   <view class="text">{{drawText/*领取乘车红包 立减1元*/}}</view>   </view>       
+  </view>
+</block>
+</template>

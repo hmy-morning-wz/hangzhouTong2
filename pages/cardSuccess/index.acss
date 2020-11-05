@@ -1,0 +1,53 @@
+.card-header {
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.card-title {
+  font-family: PingFangSC-Medium;
+  font-size: 38rpx;
+  color: #1A1F26;
+  line-height: 100rpx;
+}
+
+.card-desc {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #707070;
+  line-height: 40rpx;
+}
+
+.success {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.desc {
+  width: 650rpx;
+  height: 422rpx;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+}
+
+.check-card {
+  border: 2rpx solid #0289F0;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #0289F0;
+  width: 329rpx;
+  line-height: 88rpx;
+}
+
+.take-bus {
+  background: #0289F0;
+  border-radius: 8rpx;
+  color: #fff;
+  font-size: 34rpx;
+  width: 329rpx;
+  line-height: 88rpx;
+}

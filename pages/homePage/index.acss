@@ -1,0 +1,4 @@
+.text-container {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}

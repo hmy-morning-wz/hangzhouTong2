@@ -1,0 +1,167 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/health/index",
+    "pages/webview/webview",
+    "pages/me/me",
+    "pages/cardDetail/index",
+    "pages/cardSuccess/index",
+    "pages/msgSuccess/index",
+    "pages/launch/index",
+    "pages/homePage/index",
+    "pages/card/pages/balance/balance",
+    "pages/card/pages/busline/busline",
+    "pages/card/pages/usage/usage",
+    "pages/card/pages/travel/travel",
+    "pages/card/pages/invoke/invoke",
+    "pages/card/pages/bind/bind",
+    "pages/card/pages/launch/launch"   
+  ],
+  "subPackages": [
+    {
+      "root": "pages/card/sub",
+      "pages": [
+        "pages/launch/launch",
+        "pages/main/main",
+        "pages/certCallback/certCallback",
+        "pages/protocol/protocol",
+        "pages/launch-error/launch-error",
+        "pages/index/index",
+        "pages/invoke/invoke",
+        "pages/balance/balance",
+        "pages/busline/busline",
+        "pages/usage/usage",
+        "pages/recharge/recharge",
+        "pages/payresult/payresult",
+        "pages/paydetail/paydetail",
+        "pages/payrecords/payrecords",
+        "pages/travel/travel",
+        "pages/traveldetail/traveldetail",
+        "pages/success/index",
+        "pages/error/error",
+        "pages/bind/bind"
+        
+      ]
+    },
+    {
+      "root": "pages/sub",
+      "pages": [
+        "icon/index",
+        "siteActivity/siteActivity",
+        "message/message",
+        "my/my",
+        "draw/draw"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/cardDetail/index": {
+      "network": "all",
+      "packages": [
+        "page/card"
+      ]
+    },
+    "pages/me/me": {
+      "network": "all",
+      "packages": [
+        "pages/sub"
+      ]
+    }
+  },
+  "useDynamicPlugins": true,
+  "window": {
+    "enableDSL": "YES",
+    "enableJSC": "YES",
+    "enableInPageRender": "YES",
+    "enableKeepAlive": "NO",
+    "enableWK": "YES",
+    "nboffline": "sync",
+    "tinyPubRes": "YES",
+    "showDomain": "NO",
+    "backgroundColor": "#F5F5F5",
+    "defaultTitle": "",
+    "titleBarColor": "#ffffff"
+  },
+  "tabBar": {
+    "textColor": "#dddddd",
+    "selectedColor": "#49a9ee",
+    "backgroundColor": "#ffffff",
+    "z-index": 1,
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "/images/tab/Home/inactive.webp",
+        "activeIcon": "/images/tab/Home/activeIcon.webp"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "name": "我的",
+        "icon": "/images/tab/Mine/inactive.webp",
+        "activeIcon": "/images/tab/Mine/Light.webp"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "通过定位获取附近站点活动"
+    }
+  },
+  "debug": true,
+  "ext": {
+    "env": "sit",
+    "apiHost": {
+      "webtrack": "https://sit-webtrack-api.allcitygo.com/event/upload"
+    },
+    "cityInfo": {
+      "appid": "2019031163539131",
+      "title": "杭州通",
+      "cityName": "杭州",
+      "cityCode": "330100"
+    },
+    "cardList": [
+      {
+        "cardType": "T0330100",
+        "balanceMode": "NORMAL"
+      },
+      {
+        "cardType": "T2330100",
+        "balanceMode": "NONE",
+        "cardDetail": "my://startapp?appId=20000067&param=%7B%22url%22%3A%22https%3A%2F%2Fgjyp.96225.com%2FqrCodeMTichet%2FhasMoney.html%22%7D%20%20"
+      }
+    ],
+    "publicId": "2018052160219015",
+    "pageJson": [
+      {
+        "pageUrl": "pages/index/index",
+        "locationId": "index4",
+        "locationName": "首页",
+        "templateId": "61"
+      },
+      {
+        "pageUrl": "pages/me/me",
+        "locationId": "my",
+        "locationName": "我的",
+        "templateId": "8"
+      },
+      {
+        "pageUrl": "pages/siteActivity/siteActivity",
+        "locationId": "siteActivity",
+        "locationName": "附近站点",
+        "templateId": "47"
+      },
+      {
+        "pageUrl": "pages/cardDetail/index",
+        "locationId": "cardDetail",
+        "locationName": "卡详情",
+        "templateId": "51"
+      },
+      {
+        "pageUrl": "pages/icon/index",
+        "locationId": "icon",
+        "locationName": "全部服务",
+        "templateId": "54"
+      }
+    ]
+  }
+}

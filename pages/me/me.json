@@ -1,0 +1,8 @@
+{
+  "transparentTitle": "NO",
+  "allowsBounceVertical": "NO",
+  "titleBarColor": "#fff",
+  "usingComponents": {       
+    "tk-lifestyle":"/components/tk-lifestyle/tk-lifestyle"
+  }
+}

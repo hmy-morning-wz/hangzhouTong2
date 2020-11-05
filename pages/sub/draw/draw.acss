@@ -1,0 +1,681 @@
+.container1 {
+  width: 750rpx;
+  background: linear-gradient(180deg, #5ba9ff 10%, #3f9fff 77%);
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+.KV_head {
+  position: relative;
+  width: 750rpx;
+  height: 980rpx;
+  margin-bottom: 24rpx;
+  background-size: 100% 100% !important;
+}
+.KV_head .prize {
+  position: absolute;
+  padding-left: 17rpx;
+  right: 0rpx;
+  top: 200rpx;
+  width: 38rpx;
+  height: 160rpx;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 24rpx 0px 0px 24rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  line-height: 30rpx;
+  writing-mode: vertical-lr;
+  letter-spacing: 2px;
+}
+.box1 {
+  position: relative;
+  width: 690rpx;
+  min-height: 132rpx;
+  background: #0f82ff;
+  border-radius: 24px;
+}
+.box1 .box1-title {
+  top: -28rpx;
+  left: 138rpx;
+  position: absolute;
+  width: 425rpx;
+  height: 105rpx;
+  background: url('https://images.allcitygo.com/miniapp/202008/BG_title.png');
+  background-size: 100% 100%;
+  text-align: center;
+  padding-top: 35rpx;
+}
+.box1 .box1-title text {
+  text-align: center;
+  width: 425rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+  text-shadow: 0px 2px 4px 0px rgba(2, 106, 255, 0.5);
+}
+.box1 .box1-in {
+  margin: 12rpx;
+  width: 666rpx;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+.box1 .box1-in .box1-item {
+  position: relative;
+  width: 618rpx;
+  height: 168rpx;
+  margin-top: 32rpx;
+  background: url('https://images.allcitygo.com/miniapp/202008/BG_quan.png');
+  background-size: 100% 100% !important;
+}
+.box1 .box1-in .box1-item .money {
+  overflow: hidden;
+  left: 32rpx;
+  bottom: 40rpx;
+  position: absolute;
+  height: 88rpx;
+  font-size: 88rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #dd282a;
+  line-height: 88rpx;
+  letter-spacing: 2rpx;
+}
+.box1 .box1-in .box1-item .money-2 {
+  font-size: 58rpx;
+  left: 30rpx;
+}
+.box1 .box1-in .box1-item .money::after {
+  content: "元";
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #dd282a;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+}
+.box1 .box1-in .box1-item .desc {
+  overflow: hidden;
+  left: 84rpx;
+  top: 36rpx;
+  position: absolute;
+  height: 36rpx;
+  background: #dd282a;
+  border-radius: 18rpx 18rpx 18rpx 0;
+  width: 67rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  line-height: 36rpx;
+}
+.box1 .box1-in .box1-item .desc-2 {
+  left: 94rpx;
+}
+.box1 .box1-in .box1-item .title {
+  overflow: hidden;
+  padding: 0;
+  left: 205rpx;
+  top: 36rpx;
+  position: absolute;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #333333;
+  line-height: 50rpx;
+}
+.box1 .box1-in .box1-item .tips {
+  left: 205rpx;
+  bottom: 44rpx;
+  position: absolute;
+  height: 37rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #cc914d;
+  line-height: 37rpx;
+}
+.box1 .box1-in .box1-item .button {
+  right: 32rpx;
+  top: 52rpx;
+  position: absolute;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 64rpx;
+  background: linear-gradient(180deg, #ff7b4f, #dd282a 100%);
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #ffffff;
+  line-height: 64rpx;
+}
+.box1 .box1-in .box1-item:nth-child(1) {
+  margin-top: 104rpx;
+}
+.box1 .box1-in .box1-item:nth-last-child(1) {
+  margin-bottom: 64rpx;
+}
+.draw-box {
+  margin-top: 56rpx;
+  position: relative;
+  width: 690rpx;
+  min-height: 170rpx;
+  background: #0f82ff;
+  border-radius: 24px;
+}
+.draw-box .box-title {
+  overflow: hidden;
+  top: -28rpx;
+  left: 138rpx;
+  position: absolute;
+  width: 425rpx;
+  height: 105rpx;
+  background: url('https://images.allcitygo.com/miniapp/202008/BG_title2.png');
+  background-size: 100% 100%;
+  text-align: center;
+  padding-top: 35rpx;
+}
+.draw-box .box-title text {
+  overflow: hidden;
+  text-align: center;
+  width: 425rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+  text-shadow: 0px 2px 4px 0px rgba(2, 106, 255, 0.5);
+}
+.draw-box .box-in {
+  margin: 12rpx;
+  width: 666rpx;
+  background: #0040be;
+  border-radius: 16px;
+  text-align: center;
+  padding-top: 96rpx;
+}
+.draw-box .box-in .title {
+  height: 40rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #fde365;
+  line-height: 40rpx;
+  letter-spacing: -1px;
+}
+.freebus {
+  margin-top: 32rpx;
+  /*
+*/
+  /* 
+.lt-item:nth-child(4) {
+ background:red;
+}*/
+}
+.freebus .lt-item-list {
+  background: #0040be;
+  border-radius: 16px;
+}
+.freebus .lt-item {
+  background-color: linear-gradient(180deg, #f6fcff, #9cccff);
+  border-radius: 32rpx;
+  overflow: hidden;
+}
+.freebus .lt-item:nth-child(5) {
+  background-color: transparent;
+}
+.wrapper {
+  padding: 20rpx;
+}
+.rectangle {
+  padding: 0 14px;
+  margin-top: 20px;
+}
+.dialog {
+  position: fixed;
+  bottom: 18px;
+}
+.tips-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+.tips-dialog .warp {
+  position: relative;
+}
+.tips-dialog .warp .corner-warp {
+  position: relative;
+  height: 159rpx;
+  width: 750rpx;
+}
+.tips-dialog .warp .corner-warp .corner {
+  top: 0rpx;
+  right: 100rpx;
+  width: 40rpx;
+  height: 160rpx;
+  transform: rotate(180deg);
+  position: absolute;
+  background: url('/images/icon/corner.svg') center no-repeat;
+  background-size: 100% 100%;
+}
+.tips-dialog .warp .guidance-content {
+  position: relative;
+  color: #fff;
+  width: 560rpx;
+  margin-left: 100rpx;
+  background: linear-gradient(190deg, #57a7ff -1%, #0f83ff 91%);
+  padding-left: 40rpx;
+  padding-bottom: 32rpx;
+  padding-top: 32rpx;
+  border-radius: 24rpx;
+}
+.tips-dialog .warp .guidance-content .more {
+  margin-left: 6px;
+  margin-right: 6px;
+  width: 39rpx;
+  height: 6rpx;
+}
+.tips-dialog .warp .guidance-content .text1 {
+  height: 40rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #ffe558;
+  line-height: 40rpx;
+}
+.tips-dialog .warp .guidance-content .add-home {
+  margin-top: 16rpx;
+  width: 492rpx;
+  height: 120rpx;
+}
+.opt-button {
+  width: 51px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+  border: #68BAF7 solid 1rpx;
+}
+.add-home {
+  width: 72px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #56ADEB;
+  color: #fff;
+  font-size: 14px;
+}
+.am-tips-dialog .am-button {
+  border: none;
+}
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  background-color: white;
+}
+.row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+.row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #888;
+  margin-right: 12px;
+}
+.notice-box {
+  margin-top: 56rpx;
+  position: relative;
+  height: 88rpx;
+  width: 690rpx;
+  background: #0f82ff;
+  border-radius: 24rpx;
+}
+.notice-box .text {
+  margin-left: 24rpx;
+  height: 88rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  line-height: 88rpx;
+  letter-spacing: -1px;
+}
+/* table 样式 */
+/*
+.table {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.table .td,
+.table .th {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 3px 5px;
+}
+.table .th {
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+*/
+/* blockquote 样式 */
+.blockquote {
+  display: block;
+  border-left: 8px solid #d0e5f2;
+  padding: 5px 10px;
+  margin: 10px 0;
+  line-height: 1.4;
+  font-size: 100%;
+  background-color: #f1f1f1;
+}
+/* code 样式 */
+.code {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin: 0 3px;
+}
+.pre .code {
+  display: block;
+}
+/* ul ol 样式 */
+.ul,
+.ol {
+  margin: 10px 0 10px 20px;
+}
+.rule-box {
+  margin-top: 56rpx;
+  position: relative;
+  width: 690rpx;
+  min-height: 170rpx;
+  background: #0f82ff;
+  border-radius: 24px;
+}
+.rule-box .box-title {
+  top: -28rpx;
+  left: 138rpx;
+  position: absolute;
+  width: 425rpx;
+  height: 105rpx;
+  background: url('https://images.allcitygo.com/miniapp/202008/BG_title.png');
+  background-size: 100% 100%;
+  text-align: center;
+  padding-top: 35rpx;
+}
+.rule-box .box-title text {
+  text-align: center;
+  width: 425rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+  text-shadow: 0px 2px 4px 0px rgba(2, 106, 255, 0.5);
+}
+.rule-box .box-in {
+  margin: 12rpx;
+  width: 598rpx;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  padding-top: 100rpx;
+  padding-left: 34rpx;
+  padding-right: 34rpx;
+  padding-bottom: 70rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: #7696bb;
+  line-height: 40rpx;
+  white-space: pre-line;
+}
+.rule-box .box-in .text-item {
+  width: 600rpx;
+  margin-top: 24rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: #7696bb;
+  line-height: 40rpx;
+  white-space: pre-line;
+}
+.rule-box .box-in .box1-item:nth-child(1) {
+  margin-top: 0rpx;
+}
+.bottom-box {
+  height: 192rpx;
+  width: 750rpx;
+}
+.modal-type {
+  width: 550rpx;
+  height: 588rpx;
+  background: linear-gradient(180deg, #fffeec, #ffedd5);
+  border-radius: 24rpx;
+  display: flex;
+  justify-content: top;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+}
+.modal-type .am-modal-content {
+  padding-top: 64rpx;
+}
+.modal-type .am-modal-footer::before {
+  display: none;
+}
+.modal-type .header {
+  height: 52rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #c8904c;
+  line-height: 52rpx;
+}
+.modal-type .box1-item {
+  position: relative;
+  width: 480rpx;
+  height: 152rpx;
+  margin-top: 32rpx;
+  background: url('https://images.allcitygo.com/miniapp/202008/BG_quan2.png');
+  background-size: 100% 100% !important;
+}
+.modal-type .box1-item .money {
+  overflow: hidden;
+  left: 32rpx;
+  bottom: 36rpx;
+  position: absolute;
+  height: 80rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #dd282a;
+  line-height: 80rpx;
+  letter-spacing: 2px;
+}
+.modal-type .box1-item .money-1 {
+  font-size: 72rpx;
+}
+.modal-type .box1-item .money-2 {
+  font-size: 72rpx;
+}
+.modal-type .box1-item .money-3 {
+  left: 28rpx;
+  font-size: 60rpx;
+}
+.modal-type .box1-item .money-4 {
+  font-size: 44rpx;
+}
+.modal-type .box1-item .money::after {
+  content: "元";
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #dd282a;
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+}
+.modal-type .box1-item .title {
+  overflow: hidden;
+  padding: 0;
+  left: 206rpx;
+  top: 29rpx;
+  position: absolute;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #333333;
+  line-height: 50rpx;
+}
+.modal-type .box1-item .tips {
+  left: 206rpx;
+  bottom: 29rpx;
+  position: absolute;
+  height: 37rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #cc914d;
+  line-height: 37rpx;
+}
+.modal-type .box2-item {
+  position: relative;
+  width: 480rpx;
+  height: 152rpx;
+  background: linear-gradient(180deg, #ffbdad, #FFd7c1);
+  border-radius: 24rpx;
+}
+.modal-type .box2-item .icon {
+  position: absolute;
+  overflow: hidden;
+  left: 26rpx;
+  top: 36rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.modal-type .box2-item .icon image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.modal-type .box2-item .title {
+  left: 132rpx;
+  right: 132rpx;
+  top: 51rpx;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  height: 50rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #333333;
+  line-height: 50rpx;
+}
+.modal-type .box2-item .button {
+  right: 26rpx;
+  top: 44rpx;
+  position: absolute;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 64rpx;
+  background: linear-gradient(180deg, #ff7b4f, #dd282a 100%);
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #ffffff;
+  line-height: 64rpx;
+}
+.modal-type .box3-item image {
+  width: 258rpx;
+  height: 200rpx;
+}
+.modal-type .button1 {
+  overflow: hidden;
+  width: 400rpx;
+  height: 72rpx;
+  background: linear-gradient(180deg, #ff7b4f, #dd282a 100%);
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  line-height: 72rpx;
+}
+.modal-type .button2 {
+  margin-top: 24rpx;
+  overflow: hidden;
+  width: 400rpx;
+  height: 72rpx;
+  background: transparent;
+  border: 2px solid #dd282a;
+  box-sizing: border-box;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #dd282a;
+  line-height: 72rpx;
+}
+.modal-type .am-modal-close {
+  width: 44rpx;
+  height: 11rpx;
+  top: 620rpx;
+  right: 253rpx;
+}

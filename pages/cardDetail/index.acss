@@ -1,0 +1,281 @@
+page {
+  background-color: #F4F5F7;
+}
+
+.container {
+  background-color: #F4F5F7;
+}
+
+.ad-container {
+  padding: 24rpx;
+  background: rgba(244, 245, 247, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-img {
+  width: 702rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+}
+
+.card-top {
+  padding-top: 32rpx;
+  background-color: #fff;
+}
+
+.top-container {
+  border-radius: 20rpx 20rpx 0px 0px;
+  height: 712rpx;
+  padding-top: 40rpx;
+}
+
+.agreement-item {
+  height: 108rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+
+.agreement-title {
+  font-weight: 400;
+  color: rgba(24, 144, 255, 1);
+}
+
+.top-container .top-title {
+  margin-bottom: 40rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: rgba(66, 82, 110, 1);
+  line-height: 48rpx;
+}
+
+.top-container,
+.menu-container,
+.post {
+  background-color: #fff;
+}
+
+.swiper-cell,
+.swiper-item {
+  position: relative;
+}
+
+.card-name {
+  top: 40rpx;
+  left: 40rpx;
+  position: absolute;
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 56rpx;
+  text-shadow: 0px 4rpx 8rpx rgba(0, 0, 0, 0.12);
+}
+
+.card-no {
+  bottom: 32rpx;
+  left: 40rpx;
+  position: absolute;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 20rpx;
+  letter-spacing: 2rpx;
+  font-size: 20rpx;
+}
+
+.card-account {
+  position: absolute;
+  top: 112rpx;
+  left: 40rpx;
+  width: 158rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 37rpx;
+  font-size: 20rpx;
+  color: rgba(255, 255, 255, 1);
+}
+.card-img-box {
+  width: 686rpx;
+  height: 304rpx;
+  max-height:304rpx;
+  border-radius: 8rpx;
+  overflow:hidden;
+}
+.card-img {
+  width: 686rpx;
+  height: 304rpx;
+  border-radius: 8rpx;
+}
+
+.menu-item {
+  height: 108rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  position: relative;
+}
+
+.menu-cell {
+  border-bottom: solid 1px #eee;
+  height: 100%;
+}
+
+.menu-right {
+  position: absolute;
+  right: 32rpx;
+  top: 32rpx;
+  bottom: 32rpx;
+}
+
+.menu-right .menu-remark {
+  font-size: 24rpx;
+  font-weight: 400;
+  margin-right: 12rpx;
+}
+
+.card-information {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+
+.card-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+
+.menu-name {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  line-height: 32rpx;
+}
+
+.card-arrow {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.footer {
+  margin-top: 56rpx;
+  margin-bottom: 56rpx;
+  text-align: center;
+}
+
+.footer .slogan {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: rgba(122, 134, 154, 1);
+  line-height: 48rpx;
+}
+
+.footer .slogan_text {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(179, 186, 197, 1);
+  line-height: 40rpx;
+}
+
+/* modal */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.modal-bg {
+  background: rgba(0, 0, 0, 0.60);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+
+.modal-body {
+  padding: 80rpx 56rpx;
+  position: relative;
+  z-index: 1001;
+  background: #fff;
+  border-radius: 16rpx;
+  max-height: 300rpx;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-header .modal-title {
+  font-size: 40rpx;
+  font-weight: 400;
+  color: rgba(9, 30, 66, 1);
+  line-height: 56rpx;
+}
+
+.modal-content {
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+  height: 320rpx;
+  overflow: auto;
+}
+
+.close {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.msg-item {
+  width: 500rpx;
+  height: 160rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20rpx;
+}
+
+.msg-left {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.msg-right {
+  padding: 10rpx;
+}
+
+.msg-voucherName {
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 50rpx;
+  overflow-x: hidden;
+  word-break: keep-all;
+  width: 320rpx;
+}
+
+.msg-brandName {
+  font-size: 20rpx;
+  color: #333333;
+  line-height: 40rpx;
+  width: 320rpx;
+}
+
+.msg-time {
+  font-size: 18rpx;
+  color: #999999;
+  line-height: 30rpx;
+}
+
+.modal-footer {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+}

@@ -1,0 +1,46 @@
+<import src="../../templates/loading/index.axml" />
+<import src="../../templates/productCard/index.axml" />
+<import src="../../templates/cardRecharge/index.axml" />
+
+
+<block  a:if="{{loading}}">
+	<template is="tpl-loading" />
+</block>
+<block a:else>
+	<view class="wrap"  >
+	<block>
+		<view class="account-list">		
+				<template is="card-recharge" data="{{...accounts[0],cardTitle:eleCard.cardTitle ,imageUrl:eleCard.imageUrl,cardStatus:cardStatus, cardId:eleCard.cardNo}}" />
+		</view>
+	</block>	
+	
+<!-- -->
+	<view a:if="{{activityText}}" class="activity-box" onTap="onActivity"> <view class="icon"></view> <text class="text1"> {{activityText}}</text> <text a:if="{{activityLink}}" class="text">》</text>	</view>
+	<block  a:if="{{cardStatus=='received'}}">
+	<view class="price-wrap main-item-wrap">
+		<view>
+		  	<block a:for={{info.list}}>
+		  		<template is="product-card" data="{{ ...item, index, onTap: 'onTapPrice', selected: (selectedPriceIdx === index) }}"/>
+		  	</block>
+		</view>
+		<view class="fixButtom">
+			  <button a:if="{{changerButton}}" type="primary" disabled="{{!cardActive || selectedPriceIdx < 0 || recharging}}" onTap="onClickPay">确认支付</button>
+			  <view class="shortcut-wrap">
+			  	<text class="short-link" onTap="onTapRechargeLog">充值记录</text>   | 	<text class="short-link" onTap="onTapLog">乘车记录</text>
+			  </view>
+		</view>
+	</view>
+	
+	<view class="change-info"  a:if="{{info.list}}">	
+			<text>卡片储值上限{{upperLimitAmount}}元，当前余额<text >{{balance}}</text>元, 还可以充值<text >{{upper}}</text>元,点击充值金额支付充值</text>
+	</view>
+  
+<!-- -->
+  </block>	
+	<block a:else> 
+		<view class="fixButtom">
+	  <button type="primary"  onTap="onJumpToBusCode">免费领卡</button>
+		</view >
+	</block>	
+</view >
+</block>

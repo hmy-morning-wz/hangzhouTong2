@@ -1,0 +1,90 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.modal-bg {
+  background: rgba(0, 0, 0, 0.60);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.modal-body {
+  padding: 40rpx 40rpx 0;
+  position: relative;
+  z-index: 1001;
+  width: 542rpx;
+  height: 495rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16rpx;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-header .modal-title {
+  height: 56rpx;
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(9, 30, 66, 1);
+  line-height: 56rpx;
+}
+
+.modal-header .desc {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.modal-content {
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+  height: 320rpx;
+  overflow: auto;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(66, 82, 110, 1);
+  line-height: 44rpx;
+}
+
+.close {
+  padding: 1rpx;
+  width: 48rpx;
+  height: 48rpx; 
+}
+
+.msg-item {
+  width: 500rpx;
+  height: 160rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20rpx;
+}
+
+.msg-left {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.msg-right {
+  padding: 10rpx;
+}
+
+.modal-footer {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+}

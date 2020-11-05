@@ -1,0 +1,13 @@
+<import src="../../templates/loading/index.axml" />
+ <template is="tpl-loading" a:if="{{loading}}" />
+<view class="wrap" a:else>
+  <view class="a-result">
+       <icon class="a-result-pic" type="success" size="56" color="rgb(31, 144, 230)" />
+       <view class="a-result-title">{{successTips}}</view>
+       <view class="a-result-message">{{unregisterMessage}}</view>
+  </view>
+  <view class="white_space_md"></view>
+  <view class="a-result-button" a:if="{{showRollback}}">
+     <button type="default" disabled="{{rollbackDisable}}" onTap="doRollback" plain>撤回申请</button>
+  </view>   
+</view>

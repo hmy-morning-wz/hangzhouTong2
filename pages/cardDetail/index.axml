@@ -1,0 +1,124 @@
+<view class="container">
+    <!-- 广告-->
+    <view class="ad-container">
+        <swiper a:if="{{ cardObj.ele_box_icon.ele_imgs.length }}"
+                indicator-dots="{{cardObj.ele_box_icon.scroll_indicatorDots}}"
+                autoplay="{{cardObj.ele_box_icon.scroll_isAutoPlay}}"
+                circular
+                vertical="{{cardObj.ele_box_icon.scroll_type === 'vertical'}}"
+                interval="{{cardObj.ele_box_icon.scroll_interval}}">
+            <block a:for="{{ cardObj.ele_box_icon.ele_imgs }}" a:for-index="idx">
+                <swiper-item>
+                    <view class="ad-swiper" data-group="广告"
+                          data-index="{{idx}}" data-obj="{{item}}" onTap="handleClick">
+                        <image class="ad-img" src="{{ item.img_src || ''}}"/>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 卡面 -->
+    <view class="card-top">
+        <view class="card-header">
+            <view class="swiper-cell" style="padding-left: 16px">
+                <view class="post-swiper swiper-item flex align-center" data-group="卡详情卡面" data-obj="{{ $getters.ele_cards[cardType]}}"
+                      onTap="handleClick">
+                    <text class="card-name">{{ $getters.ele_cards[cardType].cardTitle }}</text>
+                    <text class="card-no" a:if="{{ showDetail && $getters.ele_cards[cardType]}}">No.{{ $getters.ele_cards[cardType].cardNo }}</text>
+                    <view class="card-img-box">
+                    <image  class="card-img" mode="widthFix" src="{{ imageUrl || '' }}" />
+                    </view>
+                </view>
+            </view>
+            <view a:if="{{showDetail && cardInfoJson.card_account && cardInfoJson.card_account.text}}" onTap="handleRecharge" data-group="充值" data-obj="{{ cardInfoJson.card_account }}"
+                  class="menu-item flex align-center">
+                <image class="card-icon" src="{{ cardInfoJson.card_account.img_src || '' }}"/>
+                <view class="menu-name">
+                    <text class="marginRight10">{{ cardInfoJson.card_account.text }}</text>
+                    <text class="marginRight10" a:if="{{ activeTab === 0  }}">: {{ $getters.balanceTitle }}</text>
+                   <!-- <text class="marginRight10" a:else> {{ monthCardAccount }}月余额</text>-->
+                    <image a:if="{{cardInfoJson.card_account.info}}" catchTap="handleInformation"
+                           data-info="{{cardInfoJson.card_account.info}}" class="card-information"
+                           src="../../images/icon/information.png"/>
+                </view>
+                <view class="menu-right flex align-center">
+                    <view class="menu-remark">{{cardInfoJson.card_account.right_text}}</view>
+                    <image class="card-arrow" src="../../images/icon/arrow.png"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 菜单列表 -->
+    <view class="menu-container">
+        <block>
+            <view class="bgGray h16"></view>
+            <!-- 切换卡面 -->
+            <view a:if="{{ cardObj.custom_card }}" onTap="handleModifyCard" data-group="更换卡面" data-obj="{{cardObj.custom_card}}"
+                  class="menu-item flex align-center">
+                <image class="card-icon" src="{{cardObj.custom_card.img_src || ''}}"/>
+                <view class="menu-name">{{cardObj.custom_card.text}}</view>
+                <view class="menu-right flex align-center">
+                    <view class="menu-remark">{{cardObj.custom_card.right_text}}</view>
+                    <image class="card-arrow" src="../../images/icon/arrow.png"/>
+                </view>
+            </view>
+            <view class="bgGray h16"></view>
+            <view class="menu-item-list" a:if="{{cardRelativeTarget}}">
+                <view onTap="handleMenuItem" data-obj="{{ o }}" data-group="服务菜单" class="menu-item"
+                      a:for="{{ cardInfoJson.service }}" a:for-item="o" data-index="{{index}}" >
+                    <view class="menu-cell flex align-center">
+                        <image class="card-icon" src="{{o.img_src || ''}}"/>
+                        <view class="menu-name">{{o.text}}</view>
+                        <view class="menu-right flex align-center">
+                            <view class="menu-remark">{{o.right_text}}</view>
+                            <image class="card-arrow" src="../../images/icon/arrow.png"/>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="bgGray h16"></view>
+            <view a:if="{{showDetail && cardRelativeTarget && cardInfoJson.checkout_card && cardInfoJson.checkout_card.text}}" onTap="handleMenuItem" data-group="退卡" data-obj="{{cardInfoJson.checkout_card }}"
+                  class="menu-item flex align-center"  >
+                <image class="card-icon" src="{{cardInfoJson.checkout_card.img_src || ''}}"/>
+                <view class="menu-name">{{cardInfoJson.checkout_card.text}}</view>
+                <view class="menu-right flex align-center">
+                    <view class="menu-remark">{{cardInfoJson.checkout_card.right_text}}</view>
+                    <image class="card-arrow" src="../../images/icon/arrow.png"/>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- 底部solgan -->
+    <view class="footer" a:if="{{cardRelativeTarget}}">
+        <view class="slogan">{{ cardRelativeTarget.page_footer[0] }}</view>
+        <view class="slogan_text">{{ cardRelativeTarget.page_footer[1] }}</view>
+    </view>
+    <view hidden="{{!showInfo}}" class="modal-container flex justify-content align-center">
+        <view class="modal-bg"></view>
+        <view class="modal-body">
+            <view class="modal-header">
+                <view class="modal-title">说明</view>
+            </view>
+            <view class="modal-content">
+                {{infoContent }}
+            </view>
+            <view class="modal-footer flex justify-content ">
+                <image class="close" src="../../images/icon/x.png" onTap="handlemodal"/>
+            </view>
+        </view>
+    </view>
+    <!-- 查看协议 -->
+    <popup show="{{showTop}}" position="bottom" onClose="onPopupClose">
+        <view class="top-container">
+            <view class="top-title">卡片协议</view>
+            <view a:if="{{ agreement_url.length }}" class="agreement-item flex align-center justify-between"
+                  a:for="{{agreement_url}}" data-group="服务协议" data-obj="{{ item }}" onTap="handleAgreement">
+                <text class="agreement-title">{{item.title}}</text>
+                <image class="card-arrow" src="../../images/icon/arrow.png"/>
+            </view>
+            <view a:if="{{ !agreement_url.length }}" class="agreement-item flex align-center justify-between">
+                <text class="agreement-title">暂无协议</text>
+            </view>
+        </view>
+    </popup>
+</view>

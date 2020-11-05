@@ -1,0 +1,7 @@
+{
+    "defaultTitle": "",
+    "usingComponents":{
+        "grid":"../../mini-antui/es/grid/index",
+        "tab": "bus-tinyapp-components/es/tab/index"
+    }
+}

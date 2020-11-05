@@ -1,0 +1,125 @@
+
+.card {
+   position: relative;
+   background-image: linear-gradient(180deg, #0078FE 0%, #0089FF 81%, rgba(0,136,255,0.00) 100%);
+   height: 485rpx;
+}
+
+.card-header {
+  position: relative;
+  width: 638rpx;
+  height: 248rpx;
+  top: 164rpx;
+  margin-left: 56rpx;
+  padding-left:32rpx; 
+  padding-top:36rpx; 
+	border-bottom: 1px solid #ddd;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  background: gray;
+}
+
+.blank-blue {
+  background-color: #108ee9;
+  width: 5rpx;
+  height: 28rpx;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.card-title {
+ font-family: PingFangSC-Medium;
+ font-size: 40rpx;
+ color: #FFFFFF;
+ letter-spacing: 0;
+ line-height: 56rpx;
+ text-shadow: 0 4rpx 8rpx rgba(0,0,0,0.12);
+}
+
+.card-title-wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.card-balance-wrap {
+	display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  margin-right: .2rem;
+  line-height: 1.5;
+}
+
+.card-balance-tip {
+	font-family: PingFangSC-Regular;
+  font-size: .24rem;
+  color: #a4a4a4;
+}
+
+
+
+
+.card-balance {
+  margin-top: 12rpx;
+  left: 40rpx;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.card-balance text {
+  color: rgba(255, 255, 255, 1);
+  padding: 4rpx 16rpx;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 37rpx;
+  line-height: 32rpx;
+  height: 32rpx;
+  padding-left: 16rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 20rpx;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.card-no {
+margin-top: 41rpx;
+opacity: 0.8;
+font-family: PingFangSC-Regular;
+font-size: 20rpx;
+color: #FFFFFF;
+letter-spacing: 2rpx;
+line-height: 18.6rpx;
+}
+
+.card-memo {
+  position: absolute;
+  bottom: 0rpx;
+  width: 750rpx;
+  background: white;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.card-memo  .icon {
+  width: 56rpx;
+  height: 56rpx;
+  background:  url('https://images.allcitygo.com/miniapp/cityminiapp/56.png') no-repeat;
+  background-size: 100% 100%;
+}
+.card-memo .text {
+  text-align: left;
+  margin-left: 16rpx;
+  width: 506rpx;
+  max-height: 60rpx;
+  overflow: hidden;
+  font-family: PingFangSC-Regular;
+  font-size: 22rpx;
+  line-height: 30rpx;
+  color: #42557C;
+  letter-spacing: 0;
+}

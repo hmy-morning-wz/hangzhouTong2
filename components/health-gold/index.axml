@@ -1,0 +1,20 @@
+<view class="health-content" onFirstAppear="onNopAppear" data-group="健康金">
+  <view class="first-line">
+    <view>{{healthSet.text}}</view>
+    <view onTap="handleJump">了解更多</view>
+  </view>
+  <view class="second-line">
+    <view class="disple-flex" a:for="{{signList.thisWeekSignList}}">
+      <view class="circle-day">
+        <view class="{{index !== 2 && index !== 6 ? 'circle' : 'gift'}} {{(index+1) <= signList.thisWeekSignCount ? 'sign-in':''}}">
+          <image a:if="{{(index+1) <= signList.thisWeekSignCount}}" class="img-sign" mode="scaleToFill" src="http://images.allcitygo.com/healthGold/gou.png"/>
+          <text a:if="{{(index+1) > signList.thisWeekSignCount  && index !== 2 && index !== 6}}">?</text>
+        </view>
+        <view>{{item.serialNumber}}天</view>
+      </view>
+      <view a:if="{{(index+1) !== signList.thisWeekSignList.length}}" class="line {{(index+1) <= signList.thisWeekSignCount ? 'sign-in':''}}"></view>
+    </view>
+    <view class="button2" onTap="handleJump" a:if="{{signList.todaySigned == 1}}">已签到</view>
+    <view class="button" onTap="handleSign"  a:else>签到</view>
+  </view>
+</view>

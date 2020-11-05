@@ -1,0 +1,89 @@
+
+{
+  "page_title": "(页面标题)杭州通公交卡",
+  "auditminiapp":"(审核版本)2.1.0",
+  "lifestyle":"ON",  
+  "icon":"ON",
+  "banner":"ON",
+  "bannerList":[{  
+    "name":"名称",
+    "seedName":"埋点名称", 
+    "image":"https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/hangzhou/WechatIMG1455.png",   
+    "url_path": "/pages/webview/webview?url=https%3a%2f%2fmoney.allcitygo.com%2fshopping%2f%23%2fgoodDetail%3fuserId%3d%7buserId%7d%26bizScenario%3dhangzhoutc%26goodsId%3d120",
+    "url_type": "self",
+    "url_data": "",
+    "url_remark": "",
+    "_remark":"重运营位列表"	
+  }
+  ],
+  "humantohuman":"ON",
+  "humantohumanSet":{  
+    "text":"主文案",
+    "seedName":"埋点名称", 
+    "text2":"运营角标",
+    "image":"https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/hangzhou/WechatIMG1455.png",   
+    "url_path": "/pages/webview/webview?url=https%3a%2f%2fmoney.allcitygo.com%2fshopping%2f%23%2fgoodDetail%3fuserId%3d%7buserId%7d%26bizScenario%3dhangzhoutc%26goodsId%3d120",
+    "url_type": "self",
+    "url_data": "",
+    "url_remark": "",
+    "_remark":"人传人红包运营位配置"	
+  },
+  "health":"ON",
+  "healthSet":{  
+    "text":"名称",
+    "seedName":"埋点名称", 
+    "text2":"了解更多",
+    "image":"https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/hangzhou/WechatIMG1455.png",   
+    "url_path": "/pages/webview/webview?url=https%3a%2f%2fmoney.allcitygo.com%2fshopping%2f%23%2fgoodDetail%3fuserId%3d%7buserId%7d%26bizScenario%3dhangzhoutc%26goodsId%3d120",
+    "url_type": "self",
+    "url_data": "",
+    "url_remark": "",
+    "_remark":"签到福利配置"	
+  },
+  "banner2":"ON",
+  "banner2List":[{  
+    "name":"名称",
+    "seedName":"埋点名称", 
+    "image":"https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/hangzhou/WechatIMG1455.png",   
+    "url_path": "/pages/webview/webview?url=https%3a%2f%2fmoney.allcitygo.com%2fshopping%2f%23%2fgoodDetail%3fuserId%3d%7buserId%7d%26bizScenario%3dhangzhoutc%26goodsId%3d120",
+    "url_type": "self",
+    "url_data": "",
+    "url_remark": "",
+    "_remark":"banner运营位列表"	
+  }
+  ],
+  "circleRecommendItem":"ON",
+  "popup":
+  [     
+     {
+        "id": "0",
+        "startTime": "2019-7-6 00:00:00",
+        "endTime": "2019-8-7 00:00:00",
+        "priority": 0,
+        "switch": "ON",
+        "onlineMode": "normal",
+        "whiteList": "2088302313827690",
+        "seedName": "信用卡活动",
+        "showMode": "awalys",
+        "showStyle": "image",
+        "image": "https://front-h5.oss-cn-hangzhou.aliyuncs.com/img/hangzhou/WechatIMG1455.png",
+        "title": "title",
+        "centent": "centent",
+        "buttonText": "立即领取",
+        "showButton": true,
+        "url_path": "/pages/webview/webview?url=https%3a%2f%2fmoney.allcitygo.com%2fshopping%2f%23%2fgoodDetail%3fuserId%3d%7buserId%7d%26bizScenario%3dhangzhoutc%26goodsId%3d120",
+        "url_type": "self",
+        "url_data": "",
+        "url_remark": "",
+        "_remark":"首页弹框设置"	
+     }     
+  ],
+ 
+  "page_footer":
+  [
+     "公交生活，有我陪伴",
+     "杭州市民卡 & 通卡联城联合运营"
+  ]
+ 
+}
+

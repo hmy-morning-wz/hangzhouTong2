@@ -1,0 +1,15 @@
+<view style="height: -webkit-fill-available;margin-bottom: 80rpx">
+<view class="card">
+  <view class="card-bg"></view>
+  <view class="card-logo">
+    <image src="{{cardLogo|| ''}}" class="card-img" mode="aspectFit" />
+    <view class="card-no">
+      <view class="card-no-text">
+        <text>NO.{{cardId}}</text>
+      </view>      
+    </view>
+  </view>  
+</view>
+<grid onGridItemClick="onItemClick" columnNum="{{3}}" list="{{menus}}" hasLine="{{false}}" />
+</view>
+<tab cardType="{{cardType}}" activeTab="CARD" />

@@ -1,0 +1,92 @@
+<view class="container-warp">
+  <view class="top">
+    <view class="top-box">
+      <image class="icon-user-logo" src="{{avatar|| ''}}" mode="widthFix"/>
+      <text class="username">{{nickName}}</text>
+      <view class="auth-cell" a:if="{{showAuth}}" onTap="updateUserInfo">
+        <text class="auth-text"> 授权获得头像、昵称</text>
+      </view>     
+    </view>
+  </view>
+
+   <view class="my-box">
+      <view class="box-left" data-group="卡券卡包"  data-obj="{{redCardVoucher}}" onTap="handleIconClick">
+        <view class="icon-box"><view class="image" style="background:url('https://images.allcitygo.com/miniapp/202007/icon_redbag.webp') center no-repeat;  background-size: 100% 100%;" /> <text class="text1">{{vpListNum}}</text> </view>
+        <text class="text2">红包卡券</text>
+      </view>   
+      <view class="box-right" data-group="我的赏金"  data-obj="{{reward}}" onTap="handleIconClick">
+          <view class="icon-box"><view  class="image"  style="background:url('https://images.allcitygo.com/miniapp/202007/icon_shangjin.webp') center no-repeat;  background-size: 100% 100%;"/><text class="text1">{{busTaskAward}}</text></view>
+        <text class="text2">我的赏金</text>
+      </view>
+       </view>
+
+  <view class="data-box"  a:if="{{my_service_icon && my_service_icon.ele_icons && my_service_icon.ele_icons.length}}">
+    <view class="data-item" data-group="我的服务" data-obj="{{my_service_icon}}" >
+      <text class="data-text">{{my_service_icon.box_title}}</text>
+    </view>
+    <view class="service-box">
+      <view class="service-item" a:for="{{my_service_icon.ele_icons}}" a:for-index="idx">
+        <image class="icon-logo" src="{{item.icon_img|| ''}}" mode="widthFix" data-index="{{idx}}" data-group="服务" data-obj="{{item}}" onTap="handleIconClick"/>
+        <view class="{{item.num  <10?'data-tip1':(item.num <100?'data-tip2':'data-tip3')}}" a:if="{{item.num}}">{{item.num}}</view>
+              <text class="text">{{item.icon_name}}</text>
+         </view>
+       </view>
+              <view class="banner-box" a:if="{{middle_banner.length}}">
+                <view >
+                  <swiper previousMargin="0rpx" nextMargin="0rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" vertical="{{vertical}}" interval="{{interval}}" circular="{{circular}}">
+                    <block a:for="{{middle_banner}}" a:for-index="idx">
+                      <swiper-item key="swiper-item-{{idx}}">
+                        <image class="middle-banner" mode="scaleToFill" src="{{item.img_src|| ''}}" data-index="{{idx}}" data-group="广告" data-obj="{{item}}" onAppear="onAppear" onTap="handleIconClick"/>
+                      </swiper-item>
+                    </block>
+                  </swiper>
+               </view>
+        </view>
+      </view>
+              <view class="msg-box">
+                <view class="data-item h48" onTap="goMessage">
+                 <image class="icon" mode="scaleToFill" src="https://images.allcitygo.com/miniapp/202007/iocn_xiaoxi.webp"/>
+                  <text class="data-text">我的消息</text>
+                  <view class="tip-box" a:if="{{messageCount}}">
+                    <text class="data-tip">{{messageCount}}</text>
+                  </view>
+                  <text class="sub_text">{{lastMessage}}</text>
+                  <image class="sub_arrow" mode="widthFix" src="/images/me/arrow.png"/>
+                </view>
+              </view>
+          <view class="bus-ch-box">    
+              <view class="data-box2" a:if="{{pageJson&&pageJson.bus_changer}}">
+                <view class="data-item" data-group="乘车挑战" data-obj="{{bus_changer}}" onTap="handleIconClick">
+                  <text class="data-text">乘车挑战，助力绿色生活</text>
+                  <text class="sub_text" a:if="{{busChangerAwardAmount}}">{{busChangerAwardAmount}}个奖励待领</text>
+                  <image class="sub_arrow" mode="widthFix" src="/images/me/arrow.png"/>
+                </view>
+              </view>
+              <view class="data-box3" a:if="{{pageJson&&pageJson.bus_changer}}">
+                <view class="item-box">
+                  <text class="tz-title" a:if="{{busChangerExpertInfo.count}}">今日参与挑战人数</text>
+                  <text class="tz-number" a:if="{{busChangerExpertInfo.count}}">{{busChangerExpertInfo.count}}</text>
+                  <button class="tz-bt" data-group="参与挑战" data-obj="{{bus_changer}}" onTap="handleIconClick">参与挑战</button>
+                  <view class="tz-image-box">
+                    <image class="tz-icon1" mode="widthFix" src="{{busChangerExpertInfo.userIcon[2].imageUrl|| ''}}" a:if="{{busChangerExpertInfo.userIcon.length>2}}"/>
+                    <image class="tz-icon2" mode="widthFix" src="{{busChangerExpertInfo.userIcon[1].imageUrl|| ''}}" a:if="{{busChangerExpertInfo.userIcon.length>1}}"/>
+                    <image class="tz-icon3" mode="widthFix" src="{{busChangerExpertInfo.userIcon[0].imageUrl|| ''}}" a:if="{{busChangerExpertInfo.userIcon.length>0}}"/>
+                  </view>
+                </view>
+              </view>
+           </view>   
+           <!--   <view class="data-box4" a:if="{{my_service_icon.ele_icons.length}}">
+                <view class="data-item">
+                  <text class="data-text">{{my_service_icon.box_title}}</text>
+                </view>
+                <view class="service-box">
+                  <view class="service-item" a:for="{{my_service_icon.ele_icons}}" a:for-index="idx">
+                    <image class="icon-logo" src="{{item.icon_img}}" mode="widthFix" data-index="{{idx}}"  data-group="服务" data-obj="{{item}}" onTap="handleIconClick"/>
+                    <text class="text">{{item.icon_name}}</text>
+                  </view>
+                </view>
+              </view>-->
+         
+      
+           
+     </view>

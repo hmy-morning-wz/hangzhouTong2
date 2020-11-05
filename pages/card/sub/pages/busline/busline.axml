@@ -1,0 +1,38 @@
+<view class="wrap">
+	<view class="search-box">
+		<search-bar
+                value="{{value}}"
+                placeholder="请输入线路号"
+                onInput="handleInput"
+                onClear="handleClear"
+                onFocus="handleFocus"
+                onBlur="handleBlur"
+                onCancel="handleCancel"
+                onSubmit="handleSubmit"
+                showCancelButton="{{false}}" />      
+    </view>
+    <view>
+        <block a:if="{{lines.length > 0}}">
+            <list>
+                <block a:for="{{lines}}" a:for-item="item">
+                    <list-item
+                        index="{{index}}"
+                        key="line-{{index}}"
+                        last="{{index === (lines.length - 1)}}"
+                    >
+                        {{item.no}}
+                        <view class="am-list-brief">{{item.from}}-{{item.to}}</view>                    
+                    </list-item>
+                </block>
+            </list>
+        </block>
+       <block a:else>
+            <view class="nodata">
+                <image style="width: 220px; height:61px;" mode="aspectFit" src="../../img/img_nothing.png"/>
+                <view>
+                    <text style="font-size: 10px;">暂无数据</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

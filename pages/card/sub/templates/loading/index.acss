@@ -1,0 +1,59 @@
+.loading-wrap {
+    padding-top: 240rpx;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.loading-circle_loading_wrap {
+    /*justify-content: center;*/
+    width: 260rpx;
+    margin: 0 auto;
+    height: 300rpx;
+    z-index: 1000;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    background-image: url('/pages/card/sub/img/loading_bg.png');
+    background-repeat: no-repeat;
+}
+
+.loading-bus {
+    width: 200rpx;
+    height: 120rpx;
+    margin-top: 100rpx;
+    z-index: 900;
+    animation-name: loading-bus-moving;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    -webkit-animation-name: loading-bus-moving;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes loading-bus-moving {
+    0% {
+        transform: rotate(0deg) translate3d(200rpx, 0rpx, 0rpx);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(-200rpx, 0rpx, 0rpx);
+    }
+}
+
+.loading-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.loading-info-wrap {
+    margin-top: 15rpx;
+}

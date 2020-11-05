@@ -1,0 +1,84 @@
+page {
+    width: 100%;
+    background: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.am-wingblank.am-wingblank-sm {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
+.title {
+    font-family: PingFangSC-Regular;
+    font-size: 0.28rem;
+    line-height: 0.34rem;
+    color: #888888;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.title_img {
+    width: 0.34rem;
+    height: 0.34rem;
+    padding-right: 0.2rem;
+    margin-bottom: -0.03rem;
+}
+
+.amount {
+    font-family: Helvetica;
+    font-size: 0.54rem;
+    color: #000000;
+    text-align: center;
+    line-height: 0.64rem;
+    padding: 0.4rem 0.2rem 0.1rem 0.2rem;
+}
+
+.order_state {
+    font-family: PingFangSC-Regular;
+    font-size: 0.24rem;
+    line-height: 0.4rem;
+    color: #888888;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+}
+
+.line_ul {
+    font-family: PingFangSC-Regular;
+    font-size: 0.28rem;
+    color: #888888;
+    list-style: none;
+    width: 100%;
+    margin-left: 0.2rem;
+}
+
+.line_li {
+    float: left;
+    width: 100%;
+    padding: 0.05rem 0 0.2rem 0;
+    line-height: 0.48rem;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.line_title {
+    float: left;
+    text-align: left;
+    width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line_text {
+    float: right;
+    text-align: right;
+    width: 65%;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

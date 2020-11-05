@@ -1,0 +1,14 @@
+<template name="common-error" >
+	<view style="width: 100%; background: #f8f8fb;overflow-x: hidden;">
+    <view class="am-result">
+        <view class="am-result-pic">
+            <icon type="cancel" size="60" color="red" />
+        </view>
+        <view class="am-result-title">错误码：{{info.code}}</view>
+        <view class="am-result-message">{{info.message}}</view>
+    </view>
+    <view class="white_space_md"></view>  
+    <button type="default" onTap="{{info.btnMethod}}" style="width: 99.2%;margin:auto;">{{info.btnName}}</button>
+</view>
+
+</template>

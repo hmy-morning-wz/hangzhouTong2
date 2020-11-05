@@ -1,0 +1,166 @@
+page {
+  min-height: 95vh;
+  
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.account-list {
+	flex-direction: column;
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  /* background: #fff; */
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  /* box-shadow: 0 -0.01rem 0 0 #d2d2d2, 0 -0.01rem 0.2rem 0 rgba(0,0,0,.07); */
+  color: #108ee9;
+  text-align: center;
+}
+
+.btn-block {
+  margin-right: 40rpx;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+
+.btn-charge {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.price-wrap {
+  padding-top: 68rpx;
+  height: 100%;
+}
+
+.main-item-wrap {
+  padding-left: 20rpx;
+  padding-right: 10rpx;
+}
+
+.fixButtom {
+  position: fixed;
+  bottom: 10px;
+  margin-left: 3%;
+  left: 0;
+  z-index: 99;
+  width: 94%;
+}
+
+.shortcut-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  color: #1890FF;
+  text-align: center;
+  line-height: 26rpx;
+}
+.short-link {
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+
+}
+
+
+.priceRect {
+  text-align: center;
+  float: left;
+  background: #FFFFFF;
+  border: 1px solid #108EE9;
+  border-radius: 6rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 36rpx;
+  color: #108EE9;
+  line-height: 120rpx;
+  width: 29.5%;
+  height: 120rpx;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+/*  &.selected {
+    color: rgb(255, 255, 255);
+    background: #108EE9;
+  }*/
+}
+
+.priceSelected {
+	color: rgb(255, 255, 255);
+  background: #108EE9;
+}
+
+.amt-disabled-selected {
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  color: #bbb;
+}
+
+.change-info {  
+  margin-left:106rpx; 
+  margin-top: 24rpx;
+  width: 574rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 22rpx;
+  color: #7A869A;
+  text-align: center;
+}
+.activity-box {
+  margin-top:80rpx;
+  margin-left: 60rpx;
+  width: 630rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-image: linear-gradient(132deg, #FEA73F 0%, #FFAA41 100%);
+  border-radius: 40rpx;
+  overflow: hidden;
+
+}
+
+.activity-box .icon {
+  width: 32rpx;
+  height: 32rpx;
+  background:  url('https://images.allcitygo.com/miniapp/cityminiapp/money.png') no-repeat;
+  background-size: 100% 100%;
+}
+.activity-box  .text1 {
+  margin-left:16rpx; 
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  white-space:nowrap;
+  width: 381rpx;
+  overflow: hidden;
+  line-height: 80rpx;
+}
+
+.activity-box  .text {
+  margin-left:16rpx; 
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  white-space:nowrap;
+  overflow: hidden;
+  line-height: 28rpx;
+}
+
+@import "/pages/card/sub/templates/loading/index.acss";
+@import "/pages/card/sub/templates/cardRecharge/index.acss";

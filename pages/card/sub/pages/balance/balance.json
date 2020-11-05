@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "卡片余额", 
+  "transparentTitle": "auto",
+  "titlePenetrate": "YES",
+  "backgroundColor": "#F5F5F5",
+  "titleBarColor": "#0078FE",
+  "barButtonTheme": "light"
+}

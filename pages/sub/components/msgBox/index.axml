@@ -1,0 +1,15 @@
+<view hidden="{{!show}}" class="modal-container flex justify-content align-center" >
+  <view class="modal-bg"></view>
+  <view class="modal-body">
+    <view class="modal-header">
+      <view class="modal-title">{{msg.title}}</view>      
+    </view>
+    <view class="modal-content">
+     {{msg.text}}
+    </view>
+  
+    <view class="modal-footer flex justify-content ">
+      <image class="close" src="/images/icon/x.png" onTap="onBtnMsg" />
+    </view>
+  </view>
+</view>

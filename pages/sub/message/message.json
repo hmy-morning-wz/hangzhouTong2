@@ -1,0 +1,10 @@
+{
+  "transparentTitle": "NO",
+  "allowsBounceVertical": "NO",
+  "defaultTitle": "我的消息",
+    "usingComponents": {
+    "list": "../mini-antui/list/index",
+    "list-item": "../mini-antui/list/list-item/index",
+    "msg-box": "../components/msgBox/index"
+  }
+}

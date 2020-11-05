@@ -1,0 +1,166 @@
+.guidance-modal-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
+
+.guidance-modal-hide {
+  display: none;
+}
+
+.guidance-modal-mask, .am-modal-document {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.guidance-modal-mask {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.guidance-jump {
+  width: 144rpx;
+  height: 72rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50rpx;
+  text-align: center;
+  opacity: 0.85;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 72rpx;
+  margin: 29rpx 32rpx 0rpx auto;
+}
+
+.guidance-first {
+  margin-top: 438rpx;
+}
+
+.guidance-second {
+  margin-top: 405rpx;
+}
+
+.guidance-third {
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.welfare-img {
+  width: 732rpx;
+  height: 316rpx;
+  margin-left: 9rpx;
+  background: url("https://images.allcitygo.com/image/cityCard/welfare-img.png?x-oss-process=image/format,webp") no-repeat;
+  background-size: 100% 100%;
+}
+
+.welfare-desc-img {
+  width: 394rpx;
+  height: 277rpx;
+  margin: -15rpx auto 0rpx 317rpx;
+  background: url("https://images.allcitygo.com/image/cityCard/welfare-desc-img.png?x-oss-process=image/format,webp") no-repeat;
+  background-size: 100% 100%;
+}
+
+.health-gold-img {
+  width: 686rpx;
+  height: 200rpx;
+  margin-top: 8rpx;
+  margin-left: 32rpx;
+  background: url("https://images.allcitygo.com/image/cityCard/health-gold-img.png?x-oss-process=image/format,webp") no-repeat;
+  background-size: 100% 100%;
+}
+
+.health-gold-desc-img {
+  width: 368rpx;
+  height: 341rpx;
+  margin: 0rpx auto 0rpx 318rpx;
+  background: url("https://images.allcitygo.com/image/cityCard/health-gold-desc-img.png?x-oss-process=image/format,webp") no-repeat;
+  background-size: 100% 100%;
+}
+
+.public-praise-img {
+  width: 213rpx;
+  height: 80rpx;
+  margin-left: 17rpx;
+  margin-bottom: 10rpx;
+  background: url("https://images.allcitygo.com/image/cityCard/public-praise-img.png?x-oss-process=image/format,webp") no-repeat;
+  background-size: 100% 100%;
+}
+
+.public-praise-desc-img {
+  width: 499rpx;
+  height: 268rpx;
+  position: relative;
+  margin: 0rpx auto 76rpx 53rpx;
+  background: url("https://images.allcitygo.com/image/cityCard/public-praise-desc-img.png?x-oss-process=image/format,webp") no-repeat;
+  background-size: 100% 100%;
+}
+
+.start-experience {
+  width: 360rpx;
+  height: 88rpx;
+  background: #ffffff;
+  border-radius: 46rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #0080ff;
+  line-height: 88rpx;
+  margin: 0rpx auto 122rpx 195rpx;
+}
+
+.praise-desc {
+  width: 400rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  top: 168rpx;
+  left: 32rpx;
+  right: 32rpx;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.health-gold-desc {
+  width: 288rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  padding-top: 88rpx;
+  margin-left: 64rpx;
+  margin-right: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.welfare-desc {
+  width: 288rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  padding-top: 178rpx;
+  margin-left: 84rpx;
+  margin-right: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
